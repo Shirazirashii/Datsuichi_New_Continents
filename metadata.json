@@ -1,0 +1,6 @@
+{
+  "name": "ダツイチ —新大陸—",
+  "description": "生成AI実践学習コミュニティ「ダツイチ —新大陸—」のランディングページ。実務で使いこなすための自立駆動型学習をサポート。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
