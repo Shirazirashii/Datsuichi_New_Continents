@@ -1,4 +1,5 @@
 import Value from '../components/Value';
+import benefitsImg from '../assets/benefits.jpg';
 
 export default function ValuePage() {
   return (
@@ -12,7 +13,7 @@ export default function ValuePage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/benefits.jpg" alt="提供価値" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={benefitsImg} alt="提供価値" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <div className="w-full">
         <Value isSinglePage={true} />

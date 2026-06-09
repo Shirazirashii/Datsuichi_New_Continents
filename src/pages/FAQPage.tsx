@@ -1,4 +1,5 @@
 import FAQ from '../components/FAQ';
+import faqImg from '../assets/faq.jpg';
 
 export default function FAQPage() {
   return (
@@ -12,7 +13,7 @@ export default function FAQPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/faq.jpg" alt="FAQ" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={faqImg} alt="FAQ" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <div className="w-full">
         <FAQ isSinglePage={true} />

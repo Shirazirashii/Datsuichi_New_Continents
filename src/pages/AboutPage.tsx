@@ -1,4 +1,5 @@
 import About from '../components/About';
+import aboutImg from '../assets/about_us.jpg';
 
 export default function AboutPage() {
   return (
@@ -12,7 +13,7 @@ export default function AboutPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/about_us.jpg" alt="ダツイチとは" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={aboutImg} alt="ダツイチとは" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <div className="w-full">
         <About isSinglePage={true} />

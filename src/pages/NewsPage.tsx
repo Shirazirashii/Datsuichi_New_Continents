@@ -1,4 +1,5 @@
 import News from '../components/News';
+import newsImg from '../assets/news.jpg';
 
 export default function NewsPage() {
   return (
@@ -12,7 +13,7 @@ export default function NewsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/news.jpg" alt="ニュース" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={newsImg} alt="ニュース" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <News isSinglePage={true} />
     </main>

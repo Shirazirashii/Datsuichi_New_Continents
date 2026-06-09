@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Flag } from 'lucide-react';
+import orgImg from '../assets/organization.jpg';
 
 export default function ManagementPage() {
   return (
@@ -13,7 +14,7 @@ export default function ManagementPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/organization.jpg" alt="運営" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={orgImg} alt="運営" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6">

@@ -1,6 +1,7 @@
 import Projects from '../components/Projects';
 import { motion } from 'motion/react';
 import { ArrowRight, Map } from 'lucide-react';
+import projectImg from '../assets/project.jpg';
 
 export default function ProjectsPage() {
   return (
@@ -14,7 +15,7 @@ export default function ProjectsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src="/assets/project.jpg" alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" />
+        <img src={projectImg} alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <Projects isSinglePage={true} />
       <div className="max-w-4xl mx-auto px-6 py-12">

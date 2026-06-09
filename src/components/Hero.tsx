@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Compass } from 'lucide-react';
+import heroImg from '../assets/datsuichi_new_hero.jpg';
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Background Gradients */}
       <div className="absolute inset-0 w-full h-full bg-slate-950">
         {/* 背景画像エリア（画像を挿入する場合は以下のコメントアウトを解除し、パスを指定してください） */}
-        <img src="/assets/datsuichi_new_hero.jpg" alt="Hero Background" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity z-0" />
+        <img src={heroImg} alt="Hero Background" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity z-0" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-700/20 blur-[120px] rounded-full pointer-events-none z-10" />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none z-10" />
       </div>
