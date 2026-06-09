@@ -12,8 +12,7 @@ export default function NewsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        {/* <img src="/your-image-path.jpg" alt="ニュース" className="absolute inset-0 w-full h-full object-cover z-10" /> */}
-        <div className="absolute inset-0 flex items-center justify-center text-slate-600 font-mono text-sm tracking-widest">IMAGE PLACEHOLDER</div>
+        <img src="/assets/news.jpg" alt="ニュース" className="absolute inset-0 w-full h-full object-cover z-10" />
       </div>
       <News isSinglePage={true} />
     </main>
