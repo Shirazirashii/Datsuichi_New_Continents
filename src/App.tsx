@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-8">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-2 px-6 md:px-8">
         {/* Left: Logo & Nav Links */}
         <div className="flex items-center gap-6 md:gap-10 min-w-0 flex-1 overflow-x-auto scrollbar-hide">
           <Link to="/" className="shrink-0 flex items-center group gap-3">

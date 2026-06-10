@@ -7,6 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-12">
           <div className="flex-1 w-full flex flex-col gap-8 items-center md:items-start">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm font-medium text-slate-400">
+              <Link to="/" className="hover:text-white transition-colors">ホーム</Link>
               <Link to="/about" className="hover:text-white transition-colors">ダツイチとは</Link>
               <Link to="/value" className="hover:text-white transition-colors">提供価値</Link>
               <Link to="/projects" className="hover:text-white transition-colors">プロジェクト</Link>

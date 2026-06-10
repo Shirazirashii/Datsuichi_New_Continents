@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none z-10" />
       </div>
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto flex flex-col items-start text-left gap-10">
+      <div className="relative z-10 max-w-7xl w-full mx-auto flex flex-col items-start text-left gap-10 -translate-y-8 md:-translate-y-12">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

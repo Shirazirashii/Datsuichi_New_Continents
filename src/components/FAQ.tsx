@@ -65,7 +65,7 @@ interface FAQProps {
 }
 
 export default function FAQ({ isSinglePage = false }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-24' : 'py-24 bg-slate-900/30'}`}>
