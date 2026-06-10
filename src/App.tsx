@@ -44,7 +44,7 @@ function Header() {
         <div className="shrink-0 ml-4 pl-2 flex items-center min-h-[40px] border-l border-slate-800/50">
           <a 
             href="#" 
-            className="inline-flex items-center justify-center px-4 py-2 flex-shrink-0 bg-gradient-to-br from-cyan-400 to-blue-600 text-white font-bold text-sm tracking-wide rounded hover:opacity-90 transition-opacity whitespace-nowrap"
+            className="inline-flex items-center justify-center px-4 py-2 flex-shrink-0 bg-gradient-to-br from-cyan-400 to-blue-600 text-white font-bold text-base md:text-lg tracking-wide rounded hover:opacity-90 transition-opacity whitespace-nowrap"
           >
             参加する
           </a>

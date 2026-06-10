@@ -13,8 +13,12 @@ export default function ManagementPage() {
       </div>
         
       {/* 横長画像挿入エリア */}
-      <div className="w-full h-48 md:h-64 lg:h-96 bg-slate-800/50 overflow-hidden relative mb-8">
-        <img src={orgImg} alt="運営" className="absolute inset-0 w-full h-full object-cover z-10" />
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 mb-8 md:mb-12">
+        <div className="w-full aspect-video bg-slate-800/50 overflow-hidden relative border border-slate-700">
+          <img src={orgImg} alt="運営" className="absolute inset-0 w-full h-full object-cover z-10" />
+          {/* 黒ぼかし（ビネット） */}
+          <div className="absolute inset-0 z-20 pointer-events-none" style={{ boxShadow: 'inset 0 0 50px rgba(0,0,0,0.8)' }} />
+        </div>
       </div>
 
       <div className="max-w-4xl mx-auto px-6">

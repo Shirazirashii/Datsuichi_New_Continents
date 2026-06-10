@@ -12,7 +12,7 @@ export default function Footer() {
               <Link to="/projects" className="hover:text-white transition-colors">プロジェクト</Link>
               <Link to="/management" className="hover:text-white transition-colors">運営</Link>
               <Link to="/news" className="hover:text-white transition-colors">ニュース</Link>
-              <Link to="/faq" className="hover:text-white transition-colors">FAQ</Link>
+              <Link to="/faq" className="hover:text-white transition-colors">よくある質問</Link>
               <Link to="/contact" className="hover:text-white transition-colors">お問い合わせ</Link>
             </div>
             
