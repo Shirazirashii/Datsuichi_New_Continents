@@ -43,10 +43,10 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
                 className="group flex items-center gap-4 md:gap-5"
               >
                 <div className="flex flex-col items-start gap-0.5">
-                  <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">View all</span>
-                  <span className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight">すべて見る</span>
+                  <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">View all</span>
+                  <span className="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">すべて見る</span>
                 </div>
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-blue-600 flex items-center justify-center group-hover:bg-blue-500 transition-all duration-300 group-hover:scale-125 shadow-lg shadow-blue-900/20 flex-shrink-0">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center group-hover:opacity-90 transition-all duration-300 group-hover:scale-125 shadow-lg shadow-blue-500/20 flex-shrink-0">
                   <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
                 </div>
               </Link>

@@ -48,14 +48,17 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className={`rounded-3xl bg-[#D2B48C] py-6 px-8 md:py-8 md:px-12 border border-[#8B5A2B] text-[#1A1A1A]`}
+            className={`rounded-none bg-[#D2B48C] py-6 px-8 md:py-8 md:px-12 border border-[#8B5A2B] text-[#1A1A1A]`}
           >
             <div className="flex flex-col gap-8 md:gap-10">
-               <div className="space-y-4">
-                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">クライアント</span>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">クライアント</span>
+                  <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">PN 001</span>
+                </div>
                 <p className="text-xl font-medium flex flex-wrap items-center gap-2">
                   <Globe2 className="w-5 h-5 text-[#1A1A1A]/60 flex-shrink-0" />
-                  <span className="text-[#8B0000] drop-shadow-md font-bold text-2xl">オクトエイド</span>
+                  <span className="text-[#B22222] drop-shadow-md font-bold text-2xl">オクトエイド</span>
                   <span className="text-lg font-medium leading-relaxed text-[#1A1A1A]">（メンタルダウン予防啓発団体）</span>
                 </p>
               </div>

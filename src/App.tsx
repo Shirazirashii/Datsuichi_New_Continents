@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import ProjectsPage from './pages/ProjectsPage';
 import AboutPage from './pages/AboutPage';
-import ManagementPage from './pages/ManagementPage';
+import CommunityPage from './pages/CommunityPage';
 import NewsPage from './pages/NewsPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
@@ -50,7 +50,7 @@ function Header() {
           <nav className="flex items-center justify-around flex-1 lg:flex-none lg:justify-start lg:gap-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium whitespace-nowrap px-2 sm:px-6 lg:px-0">
             <Link to="/about" className="text-slate-300 hover:text-white transition-colors">ダツイチとは</Link>
             <Link to="/projects" className="text-slate-300 hover:text-cyan-400 transition-colors">プロジェクト</Link>
-            <Link to="/management" className="text-slate-300 hover:text-white transition-colors">団体運営</Link>
+            <Link to="/community" className="text-slate-300 hover:text-white transition-colors">団体運営</Link>
             <Link to="/news" className="hidden lg:block text-slate-300 hover:text-white transition-colors">ニュース</Link>
             <Link to="/faq" className="hidden lg:block text-slate-300 hover:text-white transition-colors">よくある質問</Link>
             <Link to="/contact" className="hidden lg:block text-slate-300 hover:text-white transition-colors">お問い合わせ</Link>
@@ -86,7 +86,7 @@ function Header() {
               <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">Project</span>
               <span className="text-white text-xl md:text-2xl font-bold group-hover:text-cyan-300 transition-colors">プロジェクト</span>
             </Link>
-            <Link to="/management" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
+            <Link to="/community" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
               <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">Community</span>
               <span className="text-white text-xl md:text-2xl font-bold group-hover:text-slate-300 transition-colors">団体運営</span>
             </Link>
@@ -129,7 +129,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/management" element={<ManagementPage />} />
+          <Route path="/community" element={<CommunityPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />

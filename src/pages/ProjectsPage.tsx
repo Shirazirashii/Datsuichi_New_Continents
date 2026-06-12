@@ -1,7 +1,7 @@
 import Projects from '../components/Projects';
 import { motion } from 'motion/react';
 import { ArrowRight, Map } from 'lucide-react';
-import projectImg from '../assets/project.jpg';
+import projectImg from '../assets/project.webp';
 import { Link } from 'react-router-dom';
 
 export default function ProjectsPage() {
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <div className="w-full max-w-4xl mx-auto aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
+        <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
           <img src={projectImg} alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" />
         </div>
       </div>
@@ -34,25 +34,25 @@ export default function ProjectsPage() {
               <Map className="w-6 h-6 text-slate-400" />
               今後のロードマップ
             </h3>
-            <div className="flex justify-start sm:justify-end">
-              <Link 
-                to="/contact"
-                className="group flex items-center gap-4 md:gap-5"
-              >
-                <div className="flex flex-col items-start gap-0.5">
-                  <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-[#D2B48C] transition-colors">Request</span>
-                  <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
-                </div>
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
-                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                </div>
-              </Link>
-            </div>
           </div>
-          <div className="rounded-3xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-l-cyan-500 p-8 space-y-4">
+          <div className="rounded-3xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-l-[#D2B48C] p-8 space-y-4">
             <p className="text-slate-300 text-lg leading-relaxed font-light">
               個人事業主や地域コミュニティの案件をテーマに実践。将来的には有償案件化し「最強の実践者集団」の完成を目指します。
             </p>
+          </div>
+          <div className="flex justify-end mt-4">
+            <Link 
+              to="/contact"
+              className="group flex items-center gap-4 md:gap-5"
+            >
+              <div className="flex flex-col items-start gap-0.5">
+                <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-[#D2B48C] transition-colors">Request</span>
+                <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
+              </div>
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              </div>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Compass } from 'lucide-react';
-import heroImg from '../assets/datsuichi_new_hero.jpg';
+import heroImg from '../assets/datsuichi_new_hero.webp';
 
 export default function Hero() {
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           className="text-4xl lg:text-7xl font-display font-black leading-tight tracking-tight text-white flex flex-col gap-2 lg:gap-4 lg:whitespace-nowrap"
         >
-          <span>ダツイチ ― 新大陸 ―</span>
+          <span className="whitespace-nowrap -mr-6 md:mr-0">ダツイチ ― 新大陸 ―</span>
           <span className="text-xl lg:text-4xl font-bold tracking-wide text-white/80">Datsuichi New Continents</span>
         </motion.h1>
 

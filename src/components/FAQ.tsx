@@ -26,11 +26,11 @@ function FAQItem({ q, a, isOpen, onClick }: { q: string, a: string, isOpen: bool
     <div className="border-b border-slate-800 last:border-0">
       <button 
         onClick={onClick}
-        className="w-full py-6 md:py-8 flex items-center justify-between gap-6 text-left group"
+        className="w-full py-6 md:py-8 flex items-center justify-between gap-3 md:gap-6 text-left group"
       >
-        <div className="flex items-center gap-4 md:gap-5 pr-8">
-          <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full border border-cyan-400 flex items-center justify-center">
-            <span className="text-cyan-400 text-lg md:text-xl font-medium leading-none select-none">Q</span>
+        <div className="flex items-center gap-2 md:gap-3 pr-2 md:pr-4">
+          <div className="shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full border border-cyan-400 flex items-center justify-center">
+            <span className="text-cyan-400 text-base md:text-lg font-medium leading-none select-none">Q</span>
           </div>
           <span className="text-lg text-slate-200 font-medium group-hover:text-cyan-400 transition-colors">
             {q}
@@ -70,7 +70,13 @@ interface FAQProps {
 }
 
 export default function FAQ({ isSinglePage = false }: FAQProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+
+  const toggleIndex = (idx: number) => {
+    setOpenIndexes(prev => 
+      prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]
+    );
+  };
 
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-24' : 'py-24 bg-slate-900/30'}`}>
@@ -87,8 +93,8 @@ export default function FAQ({ isSinglePage = false }: FAQProps) {
               key={idx} 
               q={faq.q} 
               a={faq.a} 
-              isOpen={openIndex === idx}
-              onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+              isOpen={openIndexes.includes(idx)}
+              onClick={() => toggleIndex(idx)}
             />
           ))}
         </div>

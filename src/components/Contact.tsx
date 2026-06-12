@@ -31,11 +31,11 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
           onSubmit={(e) => e.preventDefault()}
         >
           <div className="space-y-2">
-            <label htmlFor="name" className="text-sm font-medium text-slate-300 block">お名前</label>
+            <label htmlFor="name" className="text-slate-300 text-lg leading-relaxed font-light block">お名前</label>
             <input 
               type="text" 
               id="name" 
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light"
+              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
               placeholder="脱　一郎"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -43,11 +43,11 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
           </div>
           
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-medium text-slate-300 block">メールアドレス</label>
+            <label htmlFor="email" className="text-slate-300 text-lg leading-relaxed font-light block">メールアドレス</label>
             <input 
               type="email" 
               id="email" 
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light"
+              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
               placeholder="hello@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -55,11 +55,11 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="message" className="text-sm font-medium text-slate-300 block">メッセージ</label>
+            <label htmlFor="message" className="text-slate-300 text-lg leading-relaxed font-light block">メッセージ</label>
             <textarea 
               id="message" 
               rows={5}
-              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light resize-none"
+              className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"
               placeholder="ここにメッセージを入力してください"
               value={message}
               onChange={(e) => setMessage(e.target.value)}

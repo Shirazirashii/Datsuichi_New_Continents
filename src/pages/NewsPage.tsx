@@ -1,5 +1,5 @@
 import News from '../components/News';
-import newsImg from '../assets/news.jpg';
+import newsImg from '../assets/news.webp';
 
 export default function NewsPage() {
   return (
@@ -13,7 +13,7 @@ export default function NewsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <div className="w-full max-w-4xl mx-auto aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
+        <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
           <img src={newsImg} alt="ニュース" className="absolute inset-0 w-full h-full object-cover z-10" />
         </div>
       </div>
