@@ -1,11 +1,18 @@
 import { motion } from 'motion/react';
 import { Send } from 'lucide-react';
+import { useState } from 'react';
 
 interface ContactProps {
   isSinglePage?: boolean;
 }
 
 export default function Contact({ isSinglePage = false }: ContactProps) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const isFormValid = name.trim() !== '' && email.trim() !== '' && message.trim() !== '';
+
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-32' : 'py-32'}`}>
       <div className="max-w-4xl mx-auto space-y-10">
@@ -29,7 +36,9 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               type="text" 
               id="name" 
               className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light"
-              placeholder="山田 太郎"
+              placeholder="脱　一郎"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           
@@ -40,6 +49,8 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               id="email" 
               className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light"
               placeholder="hello@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
@@ -50,12 +61,17 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               rows={5}
               className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all font-light resize-none"
               placeholder="ここにメッセージを入力してください"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
 
-          <button className="w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-cyan-600 text-white font-bold rounded-xl overflow-hidden transition-transform active:scale-95 hover:bg-cyan-500">
+          <button 
+            disabled={!isFormValid}
+            className={`w-full group relative inline-flex items-center justify-center gap-2 px-8 py-4 font-bold rounded-xl overflow-hidden transition-all ${isFormValid ? 'bg-cyan-600 text-white hover:bg-cyan-500 active:scale-95' : 'bg-slate-700 text-slate-400 cursor-not-allowed'}`}
+          >
             <span>送信する</span>
-            <Send className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+            <Send className={`w-4 h-4 transition-transform ${isFormValid ? 'group-hover:-translate-y-1 group-hover:translate-x-1' : ''}`} />
           </button>
         </motion.form>
       </div>

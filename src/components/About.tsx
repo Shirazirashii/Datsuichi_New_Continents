@@ -51,7 +51,7 @@ export default function About({ isSinglePage = false }: AboutProps) {
             viewport={{ once: true }}
             className="text-left"
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white pl-4 md:pl-8 lg:pl-12 xl:pl-16">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white pl-3 md:pl-[max(12px,calc(50vw-460px))] xl:pl-[180px]">
               ダツイチとは
             </h2>
           </motion.div>
@@ -63,7 +63,7 @@ export default function About({ isSinglePage = false }: AboutProps) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="w-full md:max-w-md lg:max-w-xl xl:max-w-2xl space-y-6 text-slate-300 text-lg leading-relaxed font-light pl-4 md:pl-8 lg:pl-12 xl:pl-16"
+            className="w-full md:max-w-[460px] lg:max-w-[628px] xl:max-w-[836px] space-y-6 text-slate-300 text-lg leading-relaxed font-light pl-3 md:pl-[max(12px,calc(50vw-460px))] xl:pl-[180px]"
           >
             <p>
               「ダツイチ —新大陸—」は、生成AIを単なる知識として学ぶのではなく、「<span className="text-white font-medium">実務で使いこなすこと</span>」を目的とした自立駆動型の学習コミュニティです。

@@ -28,9 +28,14 @@ function FAQItem({ q, a, isOpen, onClick }: { q: string, a: string, isOpen: bool
         onClick={onClick}
         className="w-full py-6 md:py-8 flex items-center justify-between gap-6 text-left group"
       >
-        <span className="text-lg text-slate-200 font-medium group-hover:text-cyan-400 transition-colors pr-8">
-          {q}
-        </span>
+        <div className="flex items-center gap-4 md:gap-5 pr-8">
+          <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full border border-cyan-400 flex items-center justify-center">
+            <span className="text-cyan-400 text-lg md:text-xl font-medium leading-none select-none">Q</span>
+          </div>
+          <span className="text-lg text-slate-200 font-medium group-hover:text-cyan-400 transition-colors">
+            {q}
+          </span>
+        </div>
         <motion.div 
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -48,7 +53,7 @@ function FAQItem({ q, a, isOpen, onClick }: { q: string, a: string, isOpen: bool
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pb-8 pt-2 text-slate-400 leading-relaxed font-light">
+            <div className="pb-8 pt-2 text-slate-400 leading-relaxed font-bold">
               <div className="pl-4 border-l-2 border-slate-700/50">
                 {a}
               </div>

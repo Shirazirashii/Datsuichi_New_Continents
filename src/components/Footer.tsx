@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer className="py-12 border-t border-slate-900 bg-slate-950/50">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-12">
-          <div className="flex-1 w-full flex flex-col gap-8 items-center md:items-start">
-            <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm font-medium text-slate-400">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 w-full">
+          <div className="flex-1 w-full flex flex-col gap-8 items-start">
+            <div className="flex flex-wrap justify-start gap-6 text-sm font-medium text-slate-400">
               <Link to="/" className="hover:text-white transition-colors">ホーム</Link>
               <Link to="/about" className="hover:text-white transition-colors">ダツイチとは</Link>
               <Link to="/projects" className="hover:text-white transition-colors">プロジェクト</Link>
-              <Link to="/management" className="hover:text-white transition-colors">コミュニティ</Link>
+              <Link to="/management" className="hover:text-white transition-colors">団体運営</Link>
               <Link to="/news" className="hover:text-white transition-colors">ニュース</Link>
               <Link to="/faq" className="hover:text-white transition-colors">よくある質問</Link>
               <Link to="/contact" className="hover:text-white transition-colors">お問い合わせ</Link>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
           
           {/* Right aligned Logo placeholder */}
-          <div className="relative w-48 h-12 flex-shrink-0 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg overflow-hidden md:ml-auto">
+          <div className="relative w-48 h-12 flex-shrink-0 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg overflow-hidden ml-auto md:ml-auto">
              {/* <img src="/your-image-path.png" alt="ダツイチ" className="absolute inset-0 w-full h-full object-cover z-10" /> */}
              <span className="text-white text-xl font-display font-black tracking-tight z-0">D</span>
           </div>

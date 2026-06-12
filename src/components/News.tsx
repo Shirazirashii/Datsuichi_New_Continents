@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export const newsItems = [
   {
@@ -27,8 +29,28 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-24' : 'py-24 border-t border-slate-800/50'}`}>
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {!isSinglePage && (
-          <div className="text-left">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">ニュース</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2 sm:mb-0">ニュース</h2>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex justify-start sm:justify-end"
+            >
+              <Link 
+                to="/news"
+                className="group flex items-center gap-4 md:gap-5"
+              >
+                <div className="flex flex-col items-start gap-0.5">
+                  <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">View all</span>
+                  <span className="text-xl md:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight">すべて見る</span>
+                </div>
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-blue-600 flex items-center justify-center group-hover:bg-blue-500 transition-all duration-300 group-hover:scale-125 shadow-lg shadow-blue-900/20 flex-shrink-0">
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                </div>
+              </Link>
+            </motion.div>
           </div>
         )}
         
@@ -43,13 +65,10 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
               className="group block"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4 py-6 border-b border-slate-800 hover:border-slate-700 transition-colors">
-                <div className="text-slate-400 font-mono text-sm tracking-tight w-32 shrink-0">
+                <div className="text-slate-400 font-mono text-base tracking-tight w-32 shrink-0">
                   {item.date}
                 </div>
                 <div className="flex-1">
-                  <span className={`inline-block px-2 py-1 rounded text-[10px] font-bold border mb-3 md:mb-0 md:mr-3 align-middle ${item.categoryColor}`}>
-                    {item.category}
-                  </span>
                   <span className="text-slate-200 font-medium group-hover:text-cyan-400 transition-colors align-middle">
                     {item.text}
                   </span>

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Globe2, Map } from 'lucide-react';
+import { ArrowRight, Globe2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectsProps {
   isSinglePage?: boolean;
@@ -12,21 +13,32 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
         
         {/* Current Project */}
         <div className="space-y-12">
-          {!isSinglePage ? (
+          {!isSinglePage && (
             <div className="flex flex-col items-start">
-              <div className="inline-flex items-center gap-2 rounded-full bg-red-500/10 text-red-500 font-bold tracking-wider mb-2 px-4 py-2 text-base border border-transparent">
-                <span className="rounded-full bg-red-500 animate-pulse w-3 h-3" />
-                進行中
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-                プロジェクト
-              </h2>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-red-500/10 text-red-500 font-bold tracking-wider mb-2 px-4 py-2 text-base border border-transparent">
-                <span className="rounded-full bg-red-500 animate-pulse w-3 h-3" />
-                進行中
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left w-full">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+                  プロジェクト
+                </h2>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="flex justify-start sm:justify-end"
+                >
+                  <Link 
+                    to="/contact"
+                    className="group flex items-center gap-4 md:gap-5"
+                  >
+                    <div className="flex flex-col items-start gap-0.5">
+                      <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-[#D2B48C] transition-colors">Request</span>
+                      <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
+                    </div>
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
+                      <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    </div>
+                  </Link>
+                </motion.div>
               </div>
             </div>
           )}
@@ -36,31 +48,48 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className={`rounded-3xl bg-[#D2B48C] py-4 px-8 md:py-6 md:px-12 border border-[#8B5A2B] text-[#1A1A1A]`}
+            className={`rounded-3xl bg-[#D2B48C] py-6 px-8 md:py-8 md:px-12 border border-[#8B5A2B] text-[#1A1A1A]`}
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               <div className="space-y-2">
-                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider">クライアント</span>
-                <p className="text-xl font-medium flex items-center gap-2">
-                  <Globe2 className="w-5 h-5 text-[#1A1A1A]/60" />
-                  <span className="text-[#8B0000]">オクトエイド</span>
+            <div className="flex flex-col gap-8 md:gap-10">
+               <div className="space-y-4">
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">クライアント</span>
+                <p className="text-xl font-medium flex flex-wrap items-center gap-2">
+                  <Globe2 className="w-5 h-5 text-[#1A1A1A]/60 flex-shrink-0" />
+                  <span className="text-[#8B0000] drop-shadow-md font-bold text-2xl">オクトエイド</span>
+                  <span className="text-lg font-medium leading-relaxed text-[#1A1A1A]">（メンタルダウン予防啓発団体）</span>
                 </p>
-                <p className="text-base text-[#1A1A1A] font-light">（メンタルダウン予防啓発団体）</p>
               </div>
               
-              <div className="space-y-2 md:col-span-2">
-                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider">支援内容</span>
-                <p className="text-lg font-medium">
-                  Webサイト構築、<br />Instagram投稿の自動化ツール構築
+              <div className="w-full h-px bg-[#1A1A1A]/30" />
+              
+              <div className="space-y-4">
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">支援内容</span>
+                <p className="text-lg font-medium leading-relaxed">
+                  Webサイト構築、<br className="md:hidden" />Instagram投稿の自動化ツール構築
                 </p>
               </div>
             </div>
             
-            <div className="mt-10 pt-8 border-t-2 border-[#1A1A1A]">
-              <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">形式</span>
-              <p className="text-lg font-medium">
-                コンペティション形式。（最優秀成果物は実際の現場で運用される予定です。）
-              </p>
+            <div className="mt-10 pt-8 border-t border-[#1A1A1A]/30 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">形式</span>
+                <p className="text-lg font-medium">
+                  コンペティション
+                </p>
+              </div>
+              <div>
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">支援期間</span>
+                <p className="text-lg font-medium">
+                  2026年6月～9月
+                </p>
+              </div>
+              <div>
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">ステータス</span>
+                <div className="inline-flex items-center gap-3 bg-[#1C1217] text-[#FF3040] px-5 py-2.5 rounded-full font-bold text-lg">
+                  <span className="rounded-full bg-[#CC2030] animate-pulse w-4 h-4 block" />
+                  進行中
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
