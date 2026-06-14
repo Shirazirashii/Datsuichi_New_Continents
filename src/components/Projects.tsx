@@ -8,7 +8,7 @@ interface ProjectsProps {
 
 export default function Projects({ isSinglePage = false }: ProjectsProps) {
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-24' : 'py-24 bg-slate-900/50'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-12 md:pb-24' : 'py-12 md:py-24 bg-slate-900/50'}`}>
       <div className="max-w-4xl mx-auto space-y-20">
         
         {/* Current Project */}
@@ -19,26 +19,6 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
                   プロジェクト
                 </h2>
-                <motion.div 
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  viewport={{ once: true }}
-                  className="flex justify-start sm:justify-end"
-                >
-                  <Link 
-                    to="/contact"
-                    className="group flex items-center gap-4 md:gap-5"
-                  >
-                    <div className="flex flex-col items-start gap-0.5">
-                      <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-[#D2B48C] transition-colors">Request</span>
-                      <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
-                    </div>
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
-                      <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                    </div>
-                  </Link>
-                </motion.div>
               </div>
             </div>
           )}
@@ -95,6 +75,29 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
               </div>
             </div>
           </motion.div>
+          
+          {!isSinglePage && (
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="flex justify-end pt-4"
+            >
+              <Link 
+                to="/contact"
+                className="group flex items-center gap-4 md:gap-5"
+              >
+                <div className="flex flex-col items-end gap-0.5 text-right">
+                  <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-[#D2B48C] transition-colors">Request</span>
+                  <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
+                </div>
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                </div>
+              </Link>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>

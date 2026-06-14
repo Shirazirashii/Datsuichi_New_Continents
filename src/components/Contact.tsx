@@ -14,7 +14,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
   const isFormValid = name.trim() !== '' && email.trim() !== '' && message.trim() !== '';
 
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-32' : 'py-32'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-16 md:pb-32' : 'py-16 md:py-32'}`}>
       <div className="max-w-4xl mx-auto space-y-10">
         {!isSinglePage && (
           <div className="text-left">
@@ -28,7 +28,12 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="space-y-6"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => {
+            e.preventDefault();
+            const subject = encodeURIComponent(`お問い合わせ（${name || '無名'}様より）`);
+            const body = encodeURIComponent(`お名前: ${name}\nメールアドレス: ${email}\n\nメッセージ:\n${message}`);
+            window.location.href = `mailto:contact@datsuichi.com?subject=${subject}&body=${body}`;
+          }}
         >
           <div className="space-y-2">
             <label htmlFor="name" className="text-slate-300 text-lg leading-relaxed font-light block">お名前</label>

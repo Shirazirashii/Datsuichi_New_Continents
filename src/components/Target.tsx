@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
+import ClosedEntryButton from './ClosedEntryButton';
 
 const targets = [
   "自らを動かし、試行錯誤を楽しめる方。",
@@ -9,33 +10,10 @@ const targets = [
 
 export default function Target() {
   return (
-    <section className="pt-16 pb-32 px-6">
+    <section className="pt-16 pb-16 md:pb-32 px-6">
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">求めるメンバー像</h2>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex justify-start sm:justify-end"
-          >
-            <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdh0tx6U7nE6dU8Hg11-iy8BiiGPjuSD8DP7zfgWlvvIJ9Wjg/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 md:gap-5"
-            >
-              <div className="flex flex-col items-start gap-0.5">
-                <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">Entry</span>
-                <span className="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">参加申込</span>
-              </div>
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center group-hover:opacity-90 transition-all duration-300 group-hover:scale-125 shadow-lg shadow-blue-500/20 flex-shrink-0">
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
-              </div>
-            </a>
-          </motion.div>
         </div>
 
         <motion.div 
@@ -65,6 +43,16 @@ export default function Target() {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+        
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex justify-end pt-4"
+        >
+            <ClosedEntryButton />
         </motion.div>
       </div>
     </section>

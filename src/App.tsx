@@ -16,6 +16,9 @@ import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
 
+import logoNavi1 from './assets/logo_navi1.webp';
+import logoNavi2 from './assets/logo_navi2.webp';
+
 function Header() {
   const location = useLocation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -41,19 +44,20 @@ function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-4 px-4 md:py-6 md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group gap-3">
-            <div className="relative h-12 aspect-square lg:aspect-[20/9] flex-shrink-0 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all overflow-hidden duration-300">
-              <span className="text-white text-xl z-0 font-display font-black tracking-tight">D</span>
+            <div className="relative h-14 md:h-16 aspect-square lg:aspect-[28/9] flex-shrink-0 rounded bg-slate-900 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all overflow-hidden duration-300">
+              <img src={logoNavi2} alt="ダツイチ" loading="eager" className="absolute inset-0 w-full h-full object-contain z-10 lg:hidden" />
+              <img src={logoNavi1} alt="ダツイチ" loading="eager" className="absolute inset-0 w-full h-full object-contain z-10 hidden lg:block" />
             </div>
           </Link>
           
           {/* Main Nav (Shows 3 centered on mobile, full list on desktop) */}
           <nav className="flex items-center justify-around flex-1 lg:flex-none lg:justify-start lg:gap-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium whitespace-nowrap px-2 sm:px-6 lg:px-0">
-            <Link to="/about" className="text-slate-300 hover:text-white transition-colors">ダツイチとは</Link>
-            <Link to="/projects" className="text-slate-300 hover:text-cyan-400 transition-colors">プロジェクト</Link>
-            <Link to="/community" className="text-slate-300 hover:text-white transition-colors">団体運営</Link>
-            <Link to="/news" className="hidden lg:block text-slate-300 hover:text-white transition-colors">ニュース</Link>
-            <Link to="/faq" className="hidden lg:block text-slate-300 hover:text-white transition-colors">よくある質問</Link>
-            <Link to="/contact" className="hidden lg:block text-slate-300 hover:text-white transition-colors">お問い合わせ</Link>
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">ダツイチとは</Link>
+            <Link to="/projects" className="text-white hover:text-cyan-400 transition-colors">プロジェクト</Link>
+            <Link to="/community" className="text-white hover:text-cyan-400 transition-colors">団体運営</Link>
+            <Link to="/news" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ニュース</Link>
+            <Link to="/faq" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">よくある質問</Link>
+            <Link to="/contact" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">お問い合わせ</Link>
           </nav>
 
           {/* Right: Hamburger Menu (Mobile Only) */}

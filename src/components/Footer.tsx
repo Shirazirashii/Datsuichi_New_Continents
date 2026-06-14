@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import logoFooter from '../assets/logo_footer.webp';
 
 export default function Footer() {
   return (
@@ -7,15 +8,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 w-full">
           <div className="flex-1 w-full flex flex-col gap-8 items-start">
             <div className="w-full">
-              <div className="text-sm font-medium text-slate-400 pb-3 mb-4 border-b border-slate-800">Sitemap</div>
-              <div className="flex flex-wrap justify-start gap-6 text-sm font-medium text-slate-400">
-                <Link to="/" className="hover:text-white transition-colors">ホーム</Link>
-                <Link to="/about" className="hover:text-white transition-colors">ダツイチとは</Link>
-                <Link to="/projects" className="hover:text-white transition-colors">プロジェクト</Link>
-                <Link to="/community" className="hover:text-white transition-colors">団体運営</Link>
-                <Link to="/news" className="hover:text-white transition-colors">ニュース</Link>
-                <Link to="/faq" className="hover:text-white transition-colors">よくある質問</Link>
-                <Link to="/contact" className="hover:text-white transition-colors">お問い合わせ</Link>
+              <div className="text-sm font-medium text-white pb-3 mb-4 border-b border-slate-800">Sitemap</div>
+              <div className="flex flex-wrap justify-start gap-6 text-sm font-medium text-white">
+                <Link to="/" className="hover:text-cyan-400 transition-colors">ホーム</Link>
+                <Link to="/about" className="hover:text-cyan-400 transition-colors">ダツイチとは</Link>
+                <Link to="/projects" className="hover:text-cyan-400 transition-colors">プロジェクト</Link>
+                <Link to="/community" className="hover:text-cyan-400 transition-colors">団体運営</Link>
+                <Link to="/news" className="hover:text-cyan-400 transition-colors">ニュース</Link>
+                <Link to="/faq" className="hover:text-cyan-400 transition-colors">よくある質問</Link>
+                <Link to="/contact" className="hover:text-cyan-400 transition-colors">お問い合わせ</Link>
               </div>
             </div>
             
@@ -49,9 +50,8 @@ export default function Footer() {
           </div>
           
           {/* Right aligned Logo placeholder */}
-          <div className="relative w-48 h-12 flex-shrink-0 rounded bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg overflow-hidden ml-auto md:ml-auto">
-             {/* <img src="/your-image-path.png" alt="ダツイチ" className="absolute inset-0 w-full h-full object-cover z-10" /> */}
-             <span className="text-white text-xl font-display font-black tracking-tight z-0">D</span>
+          <div className="relative h-14 md:h-16 aspect-[28/9] flex-shrink-0 rounded bg-slate-900 flex items-center justify-center shadow-lg overflow-hidden ml-auto md:ml-auto">
+             <img src={logoFooter} alt="ダツイチ" loading="lazy" className="absolute inset-0 w-full h-full object-contain z-10" />
           </div>
         </div>
       </div>

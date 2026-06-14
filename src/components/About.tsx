@@ -66,7 +66,7 @@ export default function About({ isSinglePage = false }: AboutProps) {
             className="w-full md:max-w-[460px] lg:max-w-[628px] xl:max-w-[836px] space-y-6 text-slate-300 text-lg leading-relaxed font-light pl-3 md:pl-[max(12px,calc(50vw-460px))] xl:pl-[180px]"
           >
             <p>
-              「ダツイチ —新大陸—」は、生成AIを単なる知識として学ぶのではなく、「<span className="text-white font-medium">実務で使いこなすこと</span>」を目的とした自立駆動型の学習コミュニティです。
+              「ダツイチ —新大陸」は、生成AIを単なる知識として学ぶのではなく、「<span className="text-white font-medium">実務で使いこなすこと</span>」を目的とした自立駆動型の学習コミュニティです。
             </p>
             <p>
               受け身の姿勢ではなく、参加者が自ら手を動かし、試行錯誤を通じて実践的なスキルを習得していく場所です。新しい大陸を開拓するように、技術の最前線を共に歩みましょう。

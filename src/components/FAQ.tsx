@@ -79,7 +79,7 @@ export default function FAQ({ isSinglePage = false }: FAQProps) {
   };
 
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-24' : 'py-24 bg-slate-900/30'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-12 md:pb-24' : 'py-12 md:py-24 bg-slate-900/30'}`}>
       <div className="max-w-4xl mx-auto space-y-16">
         {!isSinglePage && (
           <div className="text-left">
