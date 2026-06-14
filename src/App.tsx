@@ -44,7 +44,7 @@ function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-4 px-4 md:py-6 md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group gap-3">
-            <div className="relative h-14 md:h-16 aspect-square lg:aspect-[28/9] flex-shrink-0 rounded bg-slate-900 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all overflow-hidden duration-300">
+            <div className="relative h-14 md:h-16 aspect-square lg:aspect-[28/9] flex-shrink-0 rounded bg-slate-900 flex items-center justify-center transition-all overflow-hidden duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
               <img src={logoNavi2} alt="ダツイチ" loading="eager" className="absolute inset-0 w-full h-full object-contain z-10 lg:hidden" />
               <img src={logoNavi1} alt="ダツイチ" loading="eager" className="absolute inset-0 w-full h-full object-contain z-10 hidden lg:block" />
             </div>
