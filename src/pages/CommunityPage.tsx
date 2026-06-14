@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
-import { Target, Flag, ArrowRight } from 'lucide-react';
+import { Target, ArrowRight } from 'lucide-react';
 import orgImg from '../assets/community.webp';
 import ClosedEntryButton from '../components/ClosedEntryButton';
+import { Icon } from '@iconify/react';
 
 export default function CommunityPage() {
   return (
@@ -59,7 +60,7 @@ export default function CommunityPage() {
             className="space-y-6"
           >
             <div className="flex items-center gap-3">
-              <Flag className="w-6 h-6 text-blue-400" />
+              <Icon icon="streamline-logos:guildeding-logo" className="w-6 h-6 text-blue-400" />
               <h2 className="text-2xl font-bold tracking-tight text-slate-200">団体概要</h2>
             </div>
             <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-10">

@@ -1,8 +1,9 @@
 import Projects from '../components/Projects';
 import { motion } from 'motion/react';
-import { ArrowRight, Map } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import projectImg from '../assets/project.webp';
 import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
 export default function ProjectsPage() {
   return (
@@ -31,7 +32,7 @@ export default function ProjectsPage() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 w-full">
             <h3 className="text-2xl font-bold tracking-tight text-white flex items-center gap-3">
-              <Map className="w-6 h-6 text-slate-400" />
+              <Icon icon="pinhead:treasure-map" className="w-6 h-6 text-slate-400" />
               今後のロードマップ
             </h3>
           </div>

@@ -1,24 +1,29 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sword, Zap, RefreshCw, Users, X } from 'lucide-react';
+import { RefreshCw, X } from 'lucide-react';
+import { Icon } from '@iconify/react';
 
 interface AboutProps {
   isSinglePage?: boolean;
 }
+
+const IconSpinningSword = ({ className }: { className?: string }) => <Icon icon="game-icons:spinning-sword" className={className} />;
+const IconLibertyWing = ({ className }: { className?: string }) => <Icon icon="game-icons:liberty-wing" className={className} />;
+const IconTeamFavorite = ({ className }: { className?: string }) => <Icon icon="fluent-mdl2:team-favorite" className={className} />;
 
 const benefitsData = [
   {
     id: 0,
     title: "「リアル」を教材に",
     desc: "架空の課題ではなく、外部企業や団体が抱える本物の困りごと（実案件）を題材にします。",
-    icon: Sword,
+    icon: IconSpinningSword,
     pos: "top-[14.6%] left-[14.6%] -translate-x-1/2 -translate-y-1/2"
   },
   {
     id: 1,
     title: "圧倒的な成長スピード",
     desc: "実際の制約条件や期待値に応えるプロセスを通じて、スキルの定着を爆発的に早めます。",
-    icon: Zap,
+    icon: IconLibertyWing,
     pos: "top-[14.6%] right-[14.6%] translate-x-1/2 -translate-y-1/2"
   },
   {
@@ -32,7 +37,7 @@ const benefitsData = [
     id: 3,
     title: "自立型学習と学びの還元",
     desc: "受け身の講義はなく、各自が最適なAIツールを選択し自ら解決策を構築。発見や失敗を共有し、「仲間に与えられる自分」を目指す文化。",
-    icon: Users,
+    icon: IconTeamFavorite,
     pos: "bottom-[14.6%] left-[14.6%] -translate-x-1/2 translate-y-1/2"
   }
 ];
