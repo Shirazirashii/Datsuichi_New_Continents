@@ -40,10 +40,10 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-4 px-4 md:py-6 md:px-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[14px] px-4 md:py-[22px] md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group gap-3">
-            <div className="relative h-14 md:h-16 w-20 md:w-24 lg:w-auto lg:aspect-[546/176] flex-shrink-0 rounded bg-transparent flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
+            <div className="relative h-[50px] md:h-[58px] w-[72px] md:w-[86px] lg:w-auto lg:aspect-[546/176] flex-shrink-0 rounded bg-transparent flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="18 8 130 110" className="absolute inset-0 w-full h-full object-contain z-10 lg:hidden">
                 <defs>
                   <linearGradient id="cyanGradientNavi" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -67,7 +67,7 @@ function Header() {
           </Link>
           
           {/* Main Nav (Shows 3 centered on mobile, full list on desktop) */}
-          <nav className="flex items-center justify-around flex-1 lg:flex-none lg:justify-start lg:gap-6 text-sm sm:text-base md:text-lg lg:text-xl font-medium whitespace-nowrap px-2 sm:px-6 lg:px-0">
+          <nav className="flex items-center justify-evenly flex-1 gap-1 lg:flex-none lg:justify-start lg:gap-6 text-[11px] sm:text-xs md:text-sm lg:text-xl font-medium whitespace-nowrap px-1 sm:px-4 lg:px-0">
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">ダツイチとは</Link>
             <Link to="/projects" className="text-white hover:text-cyan-400 transition-colors">プロジェクト</Link>
             <Link to="/community" className="text-white hover:text-cyan-400 transition-colors">団体運営</Link>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowRight, Clock, X } from 'lucide-react';
+import { Clock, X } from 'lucide-react';
+import { CustomArrow } from './CustomArrow';
 
 export default function ClosedEntryButton() {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +17,7 @@ export default function ClosedEntryButton() {
           <span className="text-xl md:text-2xl font-bold text-slate-400 transition-colors tracking-tight">参加申込</span>
         </div>
         <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-slate-700 flex items-center justify-center transition-all duration-300 shadow-lg flex-shrink-0 group-hover:opacity-90 group-hover:scale-125">
-          <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-slate-400" />
+          <CustomArrow className="w-[40%] h-auto text-white ml-[12%]" />
         </div>
       </button>
 

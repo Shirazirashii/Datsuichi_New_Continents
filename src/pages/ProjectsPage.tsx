@@ -1,9 +1,9 @@
 import Projects from '../components/Projects';
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
 import projectImg from '../assets/project.webp';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import { CustomArrow } from '../components/CustomArrow';
 
 export default function ProjectsPage() {
   return (
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
         <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
-          <img src={`/.netlify/images?url=${projectImg}`} alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" loading="eager" />
+          <img src={`/.netlify/images?url=${projectImg}`} alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" fetchpriority="high" />
         </div>
       </div>
       <Projects isSinglePage={true} />
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
                 <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
               </div>
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                <CustomArrow className="w-[40%] h-auto text-white ml-[12%]" />
               </div>
             </Link>
           </div>

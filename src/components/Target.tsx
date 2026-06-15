@@ -8,9 +8,9 @@ const targets = [
   "目的達成のためのAIツール課金を厭わない方。"
 ];
 
-export default function Target() {
+export default function Target({ isSinglePage = false }: { isSinglePage?: boolean }) {
   return (
-    <section className="pt-16 pb-16 md:pb-32 px-6">
+    <section className={`px-6 ${isSinglePage ? "pt-16 pb-0" : "pt-16 pb-16 md:pb-32"}`}>
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">求めるメンバー像</h2>

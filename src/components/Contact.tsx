@@ -14,7 +14,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
   const isFormValid = name.trim() !== '' && email.trim() !== '' && message.trim() !== '';
 
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-16 md:pb-32' : 'py-16 md:py-32'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-16 md:py-32'}`}>
       <div className="max-w-4xl mx-auto space-y-10">
         {!isSinglePage && (
           <div className="text-left">

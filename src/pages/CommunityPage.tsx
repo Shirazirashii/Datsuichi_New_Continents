@@ -17,7 +17,7 @@ export default function CommunityPage() {
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-12 md:mb-16">
         <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
-          <img src={`/.netlify/images?url=${orgImg}`} alt="団体運営" className="absolute inset-0 w-full h-full object-cover z-10" loading="eager" />
+          <img src={`/.netlify/images?url=${orgImg}`} alt="団体運営" className="absolute inset-0 w-full h-full object-cover z-10" fetchpriority="high" />
         </div>
       </div>
 

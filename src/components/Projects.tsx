@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import { CustomArrow } from './CustomArrow';
 
 interface ProjectsProps {
   isSinglePage?: boolean;
@@ -9,7 +9,7 @@ interface ProjectsProps {
 
 export default function Projects({ isSinglePage = false }: ProjectsProps) {
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-12 md:pb-24' : 'py-12 md:py-24 bg-slate-900/50'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 bg-slate-900/50'}`}>
       <div className="max-w-4xl mx-auto space-y-20">
         
         {/* Current Project */}
@@ -94,7 +94,7 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
                   <span className="text-xl md:text-2xl font-bold text-white group-hover:text-[#D2B48C] transition-colors tracking-tight">支援をご希望の方</span>
                 </div>
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#D2B48C] flex items-center justify-center transition-all duration-300 group-hover:scale-125 shadow-lg shadow-[#D2B48C]/20 flex-shrink-0">
-                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                  <CustomArrow className="w-[40%] h-auto text-white ml-[12%]" />
                 </div>
               </Link>
             </motion.div>

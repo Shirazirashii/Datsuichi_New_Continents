@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Gradients */}
       <div className="absolute inset-0 w-full h-full bg-slate-950">
         {/* 背景画像エリア */}
-        <img src={`/.netlify/images?url=${heroImg}`} alt="Hero Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-80" loading="eager" />
+        <img src={`/.netlify/images?url=${heroImg}`} alt="Hero Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-95" loading="eager" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-cyan-700/20 blur-[80px] lg:blur-[120px] rounded-full pointer-events-none z-10" />
         <div className="absolute top-0 right-0 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-blue-600/10 blur-[60px] lg:blur-[100px] rounded-full pointer-events-none z-10" />
       </div>

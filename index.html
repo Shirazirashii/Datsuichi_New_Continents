@@ -3,11 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Datsuichi New Continents</title>
+    <!-- Prefetch for remaining WebP images -->
+    <link rel="prefetch" href="/src/assets/about_us.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/community.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/contact_us.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/datsuichi_new_hero.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/faq.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/news.webp" as="image" />
+    <link rel="prefetch" href="/src/assets/project.webp" as="image" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then((registration) => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }).catch((err) => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   </body>
 </html>
 

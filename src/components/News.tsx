@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { CustomArrow } from './CustomArrow';
 
 export const newsItems = [
   {
@@ -26,7 +26,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
   const displayedItems = limit ? newsItems.slice(0, limit) : newsItems;
 
   return (
-    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-12 md:pb-24' : 'py-12 md:py-24 border-t border-slate-800/50'}`}>
+    <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 border-t border-slate-800/50'}`}>
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {!isSinglePage && (
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
@@ -75,7 +75,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
                 <span className="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">すべて見る</span>
               </div>
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center group-hover:opacity-90 transition-all duration-300 group-hover:scale-125 shadow-lg shadow-blue-500/20 flex-shrink-0">
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                <CustomArrow className="w-[40%] h-auto text-white ml-[12%]" />
               </div>
             </Link>
           </motion.div>

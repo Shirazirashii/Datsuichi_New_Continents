@@ -144,7 +144,7 @@ export default function About({ isSinglePage = false }: AboutProps) {
               </button>
               
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#06b6d4]/20 border border-[#06b6d4]/40 flex items-center justify-center text-[#06b6d4]">
+                <div className="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-full bg-[#06b6d4]/20 border border-[#06b6d4]/40 flex items-center justify-center text-[#06b6d4]">
                   {(() => {
                     const ActiveIcon = benefitsData[activeId].icon;
                     return <ActiveIcon className="w-6 h-6" />;
