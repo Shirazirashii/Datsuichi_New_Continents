@@ -1,8 +1,10 @@
 import { motion } from 'motion/react';
 import { Target, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import orgImg from '../assets/community.webp';
 import ClosedEntryButton from '../components/ClosedEntryButton';
 import { Icon } from '@iconify/react';
+import HeroImage from '../components/HeroImage';
 
 export default function CommunityPage() {
   return (
@@ -16,12 +18,11 @@ export default function CommunityPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-12 md:mb-16">
-        <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
-          <img src={`/.netlify/images?url=${orgImg}`} alt="団体運営" className="absolute inset-0 w-full h-full object-cover z-10" fetchpriority="high" />
-        </div>
+        <HeroImage src={orgImg} alt="団体運営" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6">
+
 
         <div className="space-y-20">
           <motion.section 
@@ -36,7 +37,7 @@ export default function CommunityPage() {
                 <h2 className="text-2xl font-bold tracking-tight text-slate-200">Message</h2>
               </div>
             </div>
-            <p className="text-xl md:text-2xl font-bold leading-relaxed bg-clip-text text-transparent bg-gradient-to-br from-cyan-400 to-blue-600">
+            <p className="text-xl md:text-2xl font-bold leading-relaxed bg-clip-text text-transparent bg-gradient-to-br from-[#89E8D6] to-[#25A7CC]">
               「作りたい」が、最大のエンジンになる。
             </p>
             <p className="text-slate-300 text-lg leading-relaxed font-light">
@@ -60,13 +61,61 @@ export default function CommunityPage() {
             className="space-y-6"
           >
             <div className="flex items-center gap-3">
-              <Icon icon="streamline-logos:guildeding-logo" className="w-6 h-6 text-blue-400" />
+              <Icon icon="streamline-logos:guildeding-logo" className="w-6 h-6 text-cyan-400" style={{ fill: '#22d3ee' }} />
               <h2 className="text-2xl font-bold tracking-tight text-slate-200">団体概要</h2>
             </div>
-            <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 md:p-10">
-              <p className="text-slate-300 text-lg leading-relaxed font-light">
-                「ダツイチ—新大陸」は、生成AIを実務で使いこなすことを目的とした、自立駆動型の学習団体運営です。前身の勉強会「ダツイチ」での知見を活かしながら、参加者が主体となって、新しい学びのパラダイムを切り拓く場所として誕生しました。
-              </p>
+            <p className="text-slate-300 text-lg leading-relaxed font-light">
+              「ダツイチ—新大陸」は、生成AIを実務で使いこなすことを目的とした「自立駆動型の学習コミュニティ」です。前身のAI勉強会「ダツイチ」での知見を活かしながら、参加者が主体となって、新しい学びのパラダイムを切り拓く場所として誕生しました。
+            </p>
+
+            {/* 団体情報カード (白地・カーボンブラック) */}
+            <div className="bg-white rounded-none p-6 md:p-10 shadow-2xl border border-slate-100 font-sans mt-8 text-[#151515]">
+              <div className="divide-y divide-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
+                  <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-center border-l-4 border-cyan-500 pl-3">
+                    団体名
+                  </div>
+                  <div className="text-[#2d2d2d] text-base md:col-span-3 font-normal pl-4 md:pl-0">
+                    ダツイチー新大陸
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
+                  <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-center border-l-4 border-cyan-500 pl-3">
+                    設立年月日
+                  </div>
+                  <div className="text-[#2d2d2d] text-base md:col-span-3 font-normal pl-4 md:pl-0">
+                    2026年5月1日
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
+                  <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-center border-l-4 border-cyan-500 pl-3">
+                    代表者
+                  </div>
+                  <div className="text-[#2d2d2d] text-base md:col-span-3 font-normal pl-4 md:pl-0">
+                    堀 陽子
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
+                  <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-start border-l-4 border-cyan-500 pl-3">
+                    活動内容
+                  </div>
+                  <div className="text-[#2d2d2d] text-base md:col-span-3 font-normal leading-relaxed whitespace-pre-wrap pl-4 md:pl-0">
+                    ・デジタル支援{"\n"}・AIワークショップ
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
+                  <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-start border-l-4 border-cyan-500 pl-3">
+                    連絡先
+                  </div>
+                  <div className="text-[#2d2d2d] text-base md:col-span-3 font-normal leading-relaxed pl-4 md:pl-0">
+                    <Link to="/contact" className="text-cyan-600 hover:text-cyan-800 underline transition-colors">お問い合わせフォーム</Link>より、ご連絡ください。
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.section>
         </div>

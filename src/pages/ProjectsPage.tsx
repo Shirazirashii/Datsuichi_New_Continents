@@ -4,6 +4,7 @@ import projectImg from '../assets/project.webp';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { CustomArrow } from '../components/CustomArrow';
+import HeroImage from '../components/HeroImage';
 
 export default function ProjectsPage() {
   return (
@@ -17,11 +18,10 @@ export default function ProjectsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
-          <img src={`/.netlify/images?url=${projectImg}`} alt="プロジェクト" className="absolute inset-0 w-full h-full object-cover z-10" fetchpriority="high" />
-        </div>
+        <HeroImage src={projectImg} alt="プロジェクト" />
       </div>
       <Projects isSinglePage={true} />
+
       <div className="max-w-4xl mx-auto px-6 py-6 md:py-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

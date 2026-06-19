@@ -1,5 +1,6 @@
 import Contact from '../components/Contact';
 import contactImg from '../assets/contact_us.webp';
+import HeroImage from '../components/HeroImage';
 
 export default function ContactPage() {
   return (
@@ -13,9 +14,7 @@ export default function ContactPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <div className="w-full max-w-4xl mx-auto aspect-video md:aspect-[20/9] bg-slate-800/50 overflow-hidden relative border border-transparent">
-          <img src={`/.netlify/images?url=${contactImg}`} alt="お問い合わせ" className="absolute inset-0 w-full h-full object-cover z-10" fetchpriority="high" />
-        </div>
+        <HeroImage src={contactImg} alt="お問い合わせ" />
       </div>
       <div className="w-full">
         <Contact isSinglePage={true} />
@@ -23,3 +22,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

@@ -14,9 +14,9 @@ import CommunityPage from './pages/CommunityPage';
 import NewsPage from './pages/NewsPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 import Footer from './components/Footer';
-
-import logoNavi1 from './assets/logo_navi1.webp';
 
 function Header() {
   const location = useLocation();
@@ -40,21 +40,11 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[14px] px-4 md:py-[22px] md:px-8">
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[12.6px] px-4 md:py-[14px] md:px-8">
           {/* Left: Logo */}
-          <Link to="/" className="shrink-0 flex items-center group gap-3">
-            <div className="relative h-[50px] md:h-[58px] w-[72px] md:w-[86px] lg:w-auto lg:aspect-[546/176] flex-shrink-0 rounded bg-transparent flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="18 8 130 110" className="absolute inset-0 w-full h-full object-contain z-10 lg:hidden">
-                <defs>
-                  <linearGradient id="cyanGradientNavi" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#89E8D6" />
-                    <stop offset="100%" stopColor="#25A7CC" />
-                  </linearGradient>
-                </defs>
-                <path fill="url(#cyanGradientNavi)" fillRule="evenodd" clipRule="evenodd" d="M130.764 13.523c13.927 4.135 14.948 15.062 2.743 29.361-2.479 2.903-4.516 6.03-4.527 6.948-.063 5.4-3.163 23.529-4.852 28.372-4.159 11.93-9.698 22.215-14.088 26.161-9.401 8.45-19.022 10.898-39.415 10.029-8.414-.358-15.892-.187-18.496.423-5.947 1.394-3.928-.238 2.871-2.32 3.728-1.142 10.036-1.788 19.576-2.005 19.335-.441 26.707-2.738 33.924-10.569l3-3.255-3.5 2.552c-1.925 1.403-5.4 3.506-7.722 4.672-4.882 2.452-18.118 4.549-23.388 3.706-5.092-.814-19.025 1.107-25.442 3.507-2.978 1.114-7.699 3.598-10.493 5.52-4.614 3.174-4.929 3.265-3.442.996 4.419-6.745 15.778-12.27 28.426-13.827 4.984-.614 9.061-1.406 9.061-1.76C75 100.639 68.139 94 66.697 94c-.844 0-3.78 1.912-6.525 4.25s-7.2 5.027-9.899 5.976c-6.574 2.313-12.53 6.768-14.563 10.894-1.251 2.54-1.67 2.873-1.687 1.342-.013-1.121.99-4.046 2.227-6.5 1.904-3.777 3.425-5.076 9.902-8.462C56.187 96.254 58 94.529 58 90.223c0-2.969.216-3.289 1.5-2.223.825.685 1.5 1.891 1.5 2.681 0 .791.45 1.159 1 .819s1-2.025 1-3.745c0-6.973-8.227-10.336-12.96-5.297-1.993 2.121-2.222 3.115-1.67 7.271.472 3.559.231 5.395-.923 7.043-2.033 2.903-3.897 2.937-2.348.042 1.25-2.334 1.449-2.091-7.073-8.64C35.377 86.137 35 85.23 35 80.884c0-2.928.79-6.513 1.928-8.742 2.661-5.216 9.22-10.892 13.519-11.698 4.482-.841 11.694.199 14.168 2.043 1.808 1.348 1.756 1.535-1.263 4.588-1.886 1.907-5.093 3.705-8 4.486L50.5 72.865l4.882.068c6.457.089 10.364-2.421 15.947-10.246 8.448-11.838 15.425-16.825 28.194-20.151 8.904-2.319 9.575-1.863 2.977 2.025-8.601 5.068-2.91 3.303 10.135-3.143 11.724-5.794 23.397-14.94 21.984-17.225-2.728-4.415-29.954 2.562-51.646 13.234-10.424 5.128-4.665.801 7.027-5.28 11.941-6.21 21.994-9.839 33.5-12.091l9-1.761-6-1.271c-7.515-1.59-19.001-.73-28.209 2.113-27.88 8.607-64.306 39.44-66.881 56.612-.626 4.179-.81 4.424-2.049 2.73-1.955-2.674-1.677-7.939.661-12.521 1.851-3.63 1.892-4.16.481-6.313-.847-1.292-3.106-3.194-5.021-4.225S22 53.22 22 52.822s2.856-2.321 6.346-4.273C33.775 45.513 35.618 45 41.103 45c6.148 0 6.637-.188 11.904-4.577C69.218 26.916 88.022 17.136 105.5 13.12c6.422-1.476 19.65-1.265 25.264.403m1.169 21.337c-4.295 4.565-10.145 8.677-19.114 13.435-6.638 3.521-6.932 4.705-1.167 4.705 4.652 0 19.353-12.242 22.871-19.045.841-1.625 1.404-2.94 1.253-2.921s-1.881 1.741-3.843 3.826m-47.12 24.662c-7.447 2.386-10.918 8.263-6.984 11.823 2.781 2.517 3.81 2 3.378-1.7-.315-2.692.126-3.762 2.23-5.417 5.6-4.405 16.959-3.606 20.255 1.425 3.447 5.26 1.54 15.006-3.937 20.121-2.843 2.655-8.767 4.614-10.056 3.325-.508-.508.215-5.865 1.709-12.658 1.424-6.477 2.414-11.953 2.199-12.168-.641-.64-7.014 2.305-8.27 3.822-.64.773-2.166 5.68-3.391 10.905s-2.926 10.564-3.777 11.864l-1.548 2.364 11.439-.409c9.161-.327 12.237-.828 15.44-2.516 12.807-6.75 15.525-22.798 4.965-29.325-4.811-2.973-16.641-3.701-23.652-1.456"/>
-              </svg>
-
-              <svg viewBox="0 0 546 176" className="absolute inset-0 w-full h-full object-contain z-10 hidden lg:block">
+          <Link to="/" className="shrink-0 flex items-center group">
+            <div className="relative h-[62px] aspect-[546/176] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
+              <svg viewBox="0 0 546 176" className="w-full h-full object-contain">
                 <defs>
                   <linearGradient id="cyanGradientDesktop" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#89E8D6" />
@@ -66,25 +56,28 @@ function Header() {
             </div>
           </Link>
           
-          {/* Main Nav (Shows 3 centered on mobile, full list on desktop) */}
-          <nav className="flex items-center justify-evenly flex-1 gap-1 lg:flex-none lg:justify-start lg:gap-6 text-[11px] sm:text-xs md:text-sm lg:text-xl font-medium whitespace-nowrap px-1 sm:px-4 lg:px-0">
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">ダツイチとは</Link>
-            <Link to="/projects" className="text-white hover:text-cyan-400 transition-colors">プロジェクト</Link>
-            <Link to="/community" className="text-white hover:text-cyan-400 transition-colors">団体運営</Link>
-            <Link to="/news" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ニュース</Link>
-            <Link to="/faq" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">よくある質問</Link>
-            <Link to="/contact" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">お問い合わせ</Link>
-          </nav>
+          {/* Right Group: Navigation & Menu */}
+          <div className="flex items-center ml-auto lg:ml-0 flex-none gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+            {/* Main Nav (Shows 3 on mobile, full list on desktop) */}
+            <nav className="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 text-xs sm:text-sm md:text-base lg:text-[17px] font-bold whitespace-nowrap tracking-wide">
+              <Link to="/about" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ダツイチとは</Link>
+              <Link to="/projects" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">プロジェクト</Link>
+              <Link to="/community" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">団体運営</Link>
+              <Link to="/news" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ニュース</Link>
+              <Link to="/faq" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">よくある質問</Link>
+              <Link to="/contact" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">お問い合わせ</Link>
+            </nav>
 
-          {/* Right: Hamburger Menu (Mobile Only) */}
-          <button 
-            className="lg:hidden shrink-0 text-slate-300 hover:text-white focus:outline-none transition-colors ml-auto pl-2"
-            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={isDrawerOpen}
-          >
-            {isDrawerOpen ? <X className="w-7 h-7 md:w-8 md:h-8" /> : <Menu className="w-7 h-7 md:w-8 md:h-8" />}
-          </button>
+            {/* Hamburger Menu (Mobile Only) */}
+            <button 
+              className="lg:hidden shrink-0 text-slate-300 hover:text-white focus:outline-none transition-colors ml-1 sm:ml-2"
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={isDrawerOpen}
+            >
+              {isDrawerOpen ? <X className="w-7 h-7 md:w-8 md:h-8" /> : <Menu className="w-7 h-7 md:w-8 md:h-8" />}
+            </button>
+          </div>
         </div>
 
         {/* Dropdown Accordion Content */}
@@ -104,7 +97,7 @@ function Header() {
             </Link>
             <Link to="/projects" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
               <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">Project</span>
-              <span className="text-white text-xl md:text-2xl font-bold group-hover:text-cyan-300 transition-colors">プロジェクト</span>
+              <span className="text-white text-xl md:text-2xl font-bold group-hover:text-slate-300 transition-colors">プロジェクト</span>
             </Link>
             <Link to="/community" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
               <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">Community</span>
@@ -153,6 +146,8 @@ export default function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
         </Routes>
 
         <Footer />

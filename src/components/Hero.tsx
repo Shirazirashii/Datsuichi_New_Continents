@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="text-base lg:text-2xl text-slate-400 max-w-3xl leading-relaxed font-bold"
+          className="text-base lg:text-2xl bg-clip-text text-transparent bg-gradient-to-br from-[#89E8D6] to-[#25A7CC] max-w-3xl leading-relaxed font-bold"
         >
           「作りたい」が、最大のエンジンになる。
         </motion.p>

@@ -4,6 +4,12 @@ import { CustomArrow } from './CustomArrow';
 
 export const newsItems = [
   {
+    date: '2026.06.13',
+    category: 'RELEASE',
+    categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
+    text: 'AI学習コミュニティ「ダツイチー新大陸」のホームページを公開しました。'
+  },
+  {
     date: '2026.06.06',
     category: 'RELEASE',
     categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',

@@ -21,7 +21,7 @@ const faqs = [
   }
 ];
 
-function FAQItem({ q, a, isOpen, onClick }: { q: string, a: string, isOpen: boolean, onClick: () => void }) {
+function FAQItem({ q, a, isOpen, onClick }: { key?: string | number, q: string, a: string, isOpen: boolean, onClick: () => void }) {
   return (
     <div className="border-b border-slate-800 last:border-0">
       <button 
