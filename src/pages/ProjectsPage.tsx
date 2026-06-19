@@ -8,7 +8,7 @@ import HeroImage from '../components/HeroImage';
 
 export default function ProjectsPage() {
   return (
-    <main className="pt-32 pb-6 md:pb-12 min-h-screen relative">
+    <main className="pt-24 md:pt-[107px] pb-6 md:pb-12 min-h-screen relative">
       <div className="px-6 mb-6">
         <div className="max-w-4xl mx-auto flex flex-col gap-0">
           <p className="text-lg md:text-xl font-medium text-cyan-400 tracking-wider mb-1">Project</p>

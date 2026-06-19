@@ -40,7 +40,7 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[12.6px] px-4 md:py-[14px] md:px-8">
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[12px] px-4 md:py-[12px] md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group">
             <div className="relative h-[62px] aspect-[546/176] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">

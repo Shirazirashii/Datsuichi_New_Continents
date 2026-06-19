@@ -4,7 +4,7 @@ import heroImg from '../assets/datsuichi_new_hero.webp';
 
 export default function Hero() {
   return (
-    <section className="relative w-full aspect-[4/3] sm:aspect-video lg:h-screen lg:min-h-screen lg:aspect-auto flex items-center justify-center overflow-hidden px-6 lg:px-12 mt-16 lg:mt-0">
+    <section className="relative w-full aspect-[4/3] sm:aspect-video lg:h-[calc(100vh-87px)] lg:min-h-[calc(100vh-87px)] lg:aspect-auto flex items-center justify-center overflow-hidden px-6 lg:px-12 mt-16 lg:mt-[87px]">
       {/* Background Gradients */}
       <div className="absolute inset-0 w-full h-full bg-slate-950">
         {/* 背景画像エリア */}
