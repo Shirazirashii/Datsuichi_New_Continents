@@ -13,7 +13,7 @@ export const newsItems = [
     date: '2026.06.06',
     category: 'RELEASE',
     categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
-    text: 'Day０（活動開始） 生成AI実践コミュニティ「ダツイチ—新大陸」本格始動。'
+    text: 'Day０（活動開始） AI学習コミュニティ「ダツイチ—新大陸」本格始動。'
   },
   {
     date: '2026.05.20',

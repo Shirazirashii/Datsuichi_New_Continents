@@ -4,11 +4,11 @@ import heroImg from '../assets/datsuichi_new_hero.webp';
 
 export default function Hero() {
   return (
-    <section className="relative w-full aspect-[4/3] sm:aspect-video lg:h-[calc(100vh-87px)] lg:min-h-[calc(100vh-87px)] lg:aspect-auto flex items-center justify-center overflow-hidden px-6 lg:px-12 mt-16 lg:mt-[87px]">
+    <section className="relative w-full aspect-[4/3] sm:aspect-video flex items-center justify-center overflow-hidden px-6 lg:px-12 mt-[79px]">
       {/* Background Gradients */}
       <div className="absolute inset-0 w-full h-full bg-slate-950">
         {/* 背景画像エリア */}
-        <img src={`/.netlify/images?url=${heroImg}`} alt="Hero Background" className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-95" loading="eager" />
+        <img src={`/.netlify/images?url=${heroImg}`} alt="Hero Background" className="absolute inset-0 w-full h-full object-cover object-right-top sm:object-center z-0 opacity-95" loading="eager" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-cyan-700/20 blur-[80px] lg:blur-[120px] rounded-full pointer-events-none z-10" />
         <div className="absolute top-0 right-0 w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-blue-600/10 blur-[60px] lg:blur-[100px] rounded-full pointer-events-none z-10" />
       </div>
