@@ -4,6 +4,12 @@ import { CustomArrow } from './CustomArrow';
 
 export const newsItems = [
   {
+    date: '2026.06.20',
+    category: 'RELEASE',
+    categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
+    text: 'Day1｜プロジェクト「オクトエイド」スタート。セオリーやノウハウを学びながら、コミュニティメンバーによるWeb制作の挑戦が始まりました。'
+  },
+  {
     date: '2026.06.13',
     category: 'RELEASE',
     categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
@@ -13,7 +19,7 @@ export const newsItems = [
     date: '2026.06.06',
     category: 'RELEASE',
     categoryColor: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
-    text: 'Day０（活動開始） AI学習コミュニティ「ダツイチ—新大陸」本格始動。'
+    text: 'Day０｜AI学習コミュニティ「ダツイチ—新大陸」本格始動。'
   },
   {
     date: '2026.05.20',
