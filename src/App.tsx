@@ -5,7 +5,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import ProjectsPage from './pages/ProjectsPage';
@@ -40,10 +39,10 @@ function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
-        <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-[8px] px-4 md:py-[8px] md:px-8">
+        <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-2 lg:py-[8px] px-4 md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group">
-            <div className="relative h-[62px] aspect-[546/176] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
+            <div className="relative h-[40px] lg:h-[62px] aspect-[546/176] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
               <svg viewBox="0 0 546 176" className="w-full h-full object-contain">
                 <defs>
                   <linearGradient id="cyanGradientDesktop" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -70,12 +69,16 @@ function Header() {
 
             {/* Hamburger Menu (Mobile Only) */}
             <button 
-              className="lg:hidden shrink-0 text-slate-300 hover:text-white focus:outline-none transition-colors ml-1 sm:ml-2"
+              className="lg:hidden shrink-0 text-slate-300 hover:text-white focus:outline-none ml-1 sm:ml-2 relative w-7 h-7 md:w-8 md:h-8 flex items-center justify-center"
               onClick={() => setIsDrawerOpen(!isDrawerOpen)}
               aria-label="Toggle menu"
               aria-expanded={isDrawerOpen}
             >
-              {isDrawerOpen ? <X className="w-7 h-7 md:w-8 md:h-8" /> : <Menu className="w-7 h-7 md:w-8 md:h-8" />}
+              <div className="w-6 h-4 relative flex flex-col justify-between items-center shrink-0">
+                <span className={`block absolute h-0.5 w-6 bg-current rounded-full transform transition-all duration-300 ease-in-out ${isDrawerOpen ? 'rotate-45 top-[7px]' : 'top-0'}`} />
+                <span className={`block absolute h-0.5 w-6 bg-current rounded-full transform transition-all duration-300 ease-in-out top-[7px] ${isDrawerOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <span className={`block absolute h-0.5 w-6 bg-current rounded-full transform transition-all duration-300 ease-in-out ${isDrawerOpen ? '-rotate-45 top-[7px]' : 'top-[14px]'}`} />
+              </div>
             </button>
           </div>
         </div>

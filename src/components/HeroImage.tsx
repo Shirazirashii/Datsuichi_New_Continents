@@ -34,7 +34,7 @@ export default function HeroImage({ src, alt }: HeroImageProps) {
         } ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[10px]'
         }`}
-        fetchpriority="high"
+        fetchPriority="high"
       />
     </div>
   );

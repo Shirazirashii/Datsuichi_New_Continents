@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Send } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface ContactProps {
   isSinglePage?: boolean;
@@ -10,8 +11,9 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [agree, setAgree] = useState(false);
 
-  const isFormValid = name.trim() !== '' && email.trim() !== '' && message.trim() !== '';
+  const isFormValid = name.trim() !== '' && email.trim() !== '' && message.trim() !== '' && agree;
 
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-16 md:py-32'}`}>
@@ -69,6 +71,20 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 pt-2 pb-4">
+            <input 
+              type="checkbox" 
+              id="agree" 
+              className="w-5 h-5 accent-cyan-600 rounded bg-slate-900 border-slate-800 text-cyan-600 focus:ring-0 focus:ring-offset-0 cursor-pointer"
+              checked={agree}
+              onChange={(e) => setAgree(e.target.checked)}
+              required
+            />
+            <label htmlFor="agree" className="text-slate-300 text-sm sm:text-base leading-relaxed font-light cursor-pointer select-none">
+              <Link to="/privacy" className="text-cyan-400 hover:underline">プライバシーポリシー</Link>に同意する
+            </label>
           </div>
 
           <button 

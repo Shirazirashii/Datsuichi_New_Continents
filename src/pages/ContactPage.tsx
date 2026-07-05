@@ -1,5 +1,5 @@
 import Contact from '../components/Contact';
-import contactImg from '../assets/contact_us.webp';
+import contactImg from '../assets/datsuichi-contact-us.webp';
 import HeroImage from '../components/HeroImage';
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <HeroImage src={contactImg} alt="お問い合わせ" />
+        <HeroImage src={contactImg} alt="ダツイチー新大陸｜お問い合わせ" />
       </div>
       <div className="w-full">
         <Contact isSinglePage={true} />

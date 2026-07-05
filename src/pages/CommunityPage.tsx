@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import orgImg from '../assets/community.webp';
+import orgImg from '../assets/datsuichi-community.webp';
 import ClosedEntryButton from '../components/ClosedEntryButton';
 import { Icon } from '@iconify/react';
 import HeroImage from '../components/HeroImage';
@@ -18,7 +18,7 @@ export default function CommunityPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-12 md:mb-16">
-        <HeroImage src={orgImg} alt="団体運営" />
+        <HeroImage src={orgImg} alt="ダツイチー新大陸｜団体運営" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6">

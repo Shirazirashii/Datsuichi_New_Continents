@@ -1,6 +1,6 @@
 import Projects from '../components/Projects';
 import { motion } from 'motion/react';
-import projectImg from '../assets/project.webp';
+import projectImg from '../assets/datsuichi-project.webp';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { CustomArrow } from '../components/CustomArrow';
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <HeroImage src={projectImg} alt="プロジェクト" />
+        <HeroImage src={projectImg} alt="ダツイチー新大陸｜プロジェクト" />
       </div>
       <Projects isSinglePage={true} />
 

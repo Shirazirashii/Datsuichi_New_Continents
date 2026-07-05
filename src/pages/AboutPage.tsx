@@ -1,5 +1,5 @@
 import About from '../components/About';
-import aboutImg from '../assets/about_us.webp';
+import aboutImg from '../assets/datsuichi-about-us.webp';
 import HeroImage from '../components/HeroImage';
 
 import Target from '../components/Target';
@@ -16,7 +16,7 @@ export default function AboutPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <HeroImage src={aboutImg} alt="ダツイチとは" />
+        <HeroImage src={aboutImg} alt="ダツイチー新大陸｜ダツイチとは" />
       </div>
       <div className="w-full">
         <About isSinglePage={true} />

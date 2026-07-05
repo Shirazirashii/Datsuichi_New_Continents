@@ -1,5 +1,5 @@
 import FAQ from '../components/FAQ';
-import faqImg from '../assets/faq.webp';
+import faqImg from '../assets/datsuichi-faq.webp';
 import HeroImage from '../components/HeroImage';
 
 export default function FAQPage() {
@@ -14,7 +14,7 @@ export default function FAQPage() {
         
       {/* 横長画像挿入エリア */}
       <div className="px-6 mb-4 md:mb-8">
-        <HeroImage src={faqImg} alt="FAQ" />
+        <HeroImage src={faqImg} alt="ダツイチー新大陸｜FAQ" />
       </div>
       <div className="w-full">
         <FAQ isSinglePage={true} />
