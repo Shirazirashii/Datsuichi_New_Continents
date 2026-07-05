@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { CustomArrow, CustomArrowLeft } from './CustomArrow';
@@ -21,7 +21,7 @@ export const newsItems: NewsItem[] = [
     id: 'news-001-day2',
     date: '2026.07.04',
     category: 'REPORT',
-    title: 'ダツイチー新大陸｜Day2｜「アシスタント型」と「エージェント型」―Webサイトを磨き上げるプロフェッショナルたちの戦略。',
+    title: 'Day2｜「アシスタント型」と「エージェント型」―Webサイトを磨き上げるプロフェッショナルたちの戦略。',
     images: [newsDay2Img],
     content: `<p>2026年7月4日。</p>
 <p>シーズン1のプロジェクト「オクトエイド」のWebサイト制作が中盤に差し掛かる中、今回は意見交換会（Day 2）を開催しました。</p>
@@ -54,7 +54,7 @@ export const newsItems: NewsItem[] = [
     id: 'news-001',
     date: '2026.06.20',
     category: 'REPORT',
-    title: 'ダツイチー新大陸｜Day1｜デジタル支援プロジェクト「オクトエイド」キックオフ。',
+    title: 'Day1｜デジタル支援プロジェクト「オクトエイド」キックオフ。',
     images: [newsDay1Img],
     content: `<p>2026年6月20日。</p>
 <p>「ダツイチ―新大陸」は、ついにシーズン1の初日（Day 1）を迎えました。</p>
@@ -145,6 +145,38 @@ export const newsItems: NewsItem[] = [
   }
 ];
 
+function NewsImage({ src, alt }: { src: string; alt: string; key?: any }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] max-h-[400px] overflow-hidden bg-slate-900/50">
+      {/* 骨組み・ローダーアニメーション */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 bg-[length:200%_100%] animate-shimmer transition-opacity duration-500 ${
+          isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+      />
+      
+      <motion.img
+        src={src}
+        alt={alt}
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ 
+          opacity: isLoaded ? 1 : 0,
+          scale: isLoaded ? 1 : 1.05
+        }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        onLoad={() => setIsLoaded(true)}
+        className="w-full h-full object-cover object-center"
+        referrerPolicy="no-referrer"
+      />
+      
+      {/* オーバーレイ */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none" />
+    </div>
+  );
+}
+
 interface NewsProps {
   limit?: number;
   isSinglePage?: boolean;
@@ -153,6 +185,18 @@ interface NewsProps {
 export default function News({ limit, isSinglePage = false }: NewsProps) {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const displayedItems = limit ? newsItems.slice(0, limit) : newsItems;
+
+  useEffect(() => {
+    // ニュース内のすべての画像を裏でプリロード
+    newsItems.forEach((item) => {
+      if (item.images && item.images.length > 0) {
+        item.images.forEach((imgSrc) => {
+          const img = new Image();
+          img.src = imgSrc;
+        });
+      }
+    });
+  }, []);
 
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 border-t border-slate-800/50'}`}>
@@ -250,12 +294,10 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
               {selectedNews.images && selectedNews.images.length > 0 && (
                 <div className="mb-8 overflow-hidden rounded-xl border border-slate-800/50">
                   {selectedNews.images.map((imgSrc, i) => (
-                    <img
+                    <NewsImage
                       key={i}
                       src={imgSrc}
                       alt={selectedNews.title}
-                      className="w-full h-auto object-cover max-h-[400px]"
-                      referrerPolicy="no-referrer"
                     />
                   ))}
                 </div>
