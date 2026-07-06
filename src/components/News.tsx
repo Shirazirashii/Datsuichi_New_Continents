@@ -305,7 +305,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
 
               {/* 本文エリア */}
               <div 
-                className="text-slate-300 text-sm sm:text-base leading-relaxed sm:leading-loose space-y-4 prose prose-invert max-w-none"
+                className="text-slate-300 text-[15px] leading-loose space-y-4 prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: selectedNews.content }}
               />
 
@@ -314,12 +314,12 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
                   onClick={() => setSelectedNews(null)}
                   className="group flex items-center gap-4 md:gap-5"
                 >
-                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:scale-125 transform-gpu will-change-transform flex-shrink-0">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:scale-125 transform-gpu will-change-transform flex-shrink-0">
                     <CustomArrowLeft className="w-[40%] aspect-[297/436] text-white transform-gpu will-change-transform" />
                   </div>
                   <div className="flex flex-col items-start gap-0.5 text-left">
-                    <span className="text-sm md:text-base font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">Back</span>
-                    <span className="text-lg md:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">一覧に戻る</span>
+                    <span className="text-base md:text-lg font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors">Back</span>
+                    <span className="text-xl md:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors tracking-tight">一覧に戻る</span>
                   </div>
                 </button>
               </div>

@@ -34,13 +34,13 @@ export default function CommunityPage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left w-full">
               <div className="flex items-center gap-3">
                 <Target className="w-6 h-6 text-cyan-400" />
-                <h2 className="text-2xl font-bold tracking-tight text-slate-200">Message</h2>
+                <h2 className="text-2xl font-bold tracking-tight text-white">Message</h2>
               </div>
             </div>
             <p className="text-xl md:text-2xl font-bold leading-relaxed bg-clip-text text-transparent bg-gradient-to-br from-[#89E8D6] to-[#25A7CC]">
               「作りたい」が、最大のエンジンになる。
             </p>
-            <p className="text-slate-300 text-lg leading-relaxed font-light">
+            <p className="text-slate-200 text-lg leading-relaxed font-light">
               私たちは、単なる知識の習得ではなく、自ら手を動かし、試行錯誤を通じて「形にする」喜びを原動力としています。自分の発見や失敗を仲間に還元する「与えられる自分」を目指し、共に成長する団体運営であり続けることを大切にしています。
             </p>
             <motion.div 
@@ -62,14 +62,14 @@ export default function CommunityPage() {
           >
             <div className="flex items-center gap-3">
               <Icon icon="streamline-logos:guildeding-logo" className="w-6 h-6 text-cyan-400" style={{ fill: '#22d3ee' }} />
-              <h2 className="text-2xl font-bold tracking-tight text-slate-200">団体概要</h2>
+              <h2 className="text-2xl font-bold tracking-tight text-white">団体概要</h2>
             </div>
-            <p className="text-slate-300 text-lg leading-relaxed font-light">
+            <p className="text-slate-200 text-lg leading-relaxed font-light">
               「ダツイチ—新大陸」は、生成AIを実務で使いこなすことを目的とした「自立駆動型の学習コミュニティ」です。前身のAI勉強会「ダツイチ」での知見を活かしながら、参加者が主体となって、新しい学びのパラダイムを切り拓く場所として誕生しました。
             </p>
 
-            {/* 団体情報カード (白地・カーボンブラック) */}
-            <div className="bg-white rounded-none p-6 md:p-10 shadow-2xl border border-slate-100 font-sans mt-8 text-[#151515]">
+            {/* 団体情報カード (目に優しい低コントラスト・ウォームグレー) */}
+            <div className="bg-zinc-50 rounded-none p-6 md:p-10 shadow-xl border border-zinc-200/80 font-sans mt-8 text-[#151515]">
               <div className="divide-y divide-slate-200">
                 <div className="grid grid-cols-1 md:grid-cols-4 py-5 gap-2 md:gap-4">
                   <div className="text-[#151515] font-bold text-base md:col-span-1 flex items-center border-l-4 border-cyan-500 pl-3">
