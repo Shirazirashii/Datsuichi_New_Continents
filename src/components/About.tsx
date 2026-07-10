@@ -118,11 +118,11 @@ export default function About({ isSinglePage = false, showBenefitsOnly = false, 
                 {/* Cybernetic Inner Ring */}
                 <div className="absolute inset-1.5 rounded-full border border-cyan-500/10 pointer-events-none" />
                 
-                <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest uppercase font-mono bg-clip-text text-transparent bg-gradient-to-b from-white via-cyan-100 to-cyan-300 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
+                <span className="text-white text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-widest uppercase font-mono bg-clip-text text-transparent bg-gradient-to-b from-white via-cyan-100 to-cyan-300 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
                   Benefits
                 </span>
                 <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent my-2" />
-                <span className="text-cyan-200/80 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[0.1em] pl-[0.1em] drop-shadow-[0_0_5px_rgba(6,182,212,0.3)]">
+                <span className="text-cyan-200/80 text-[17px] sm:text-xl lg:text-2xl font-bold tracking-[0.05em] pl-[0.05em] drop-shadow-[0_0_5px_rgba(6,182,212,0.3)] whitespace-nowrap">
                   4つの提供価値
                 </span>
               </div>
@@ -399,11 +399,11 @@ export default function About({ isSinglePage = false, showBenefitsOnly = false, 
                   {/* Cybernetic Inner Ring */}
                   <div className="absolute inset-1.5 rounded-full border border-cyan-500/10 pointer-events-none" />
                   
-                  <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest uppercase font-mono bg-clip-text text-transparent bg-gradient-to-b from-white via-cyan-100 to-cyan-300 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
+                  <span className="text-white text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-widest uppercase font-mono bg-clip-text text-transparent bg-gradient-to-b from-white via-cyan-100 to-cyan-300 drop-shadow-[0_0_10px_rgba(6,182,212,0.6)]">
                     Benefits
                   </span>
                   <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent my-2" />
-                  <span className="text-cyan-200/80 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[0.1em] pl-[0.1em] drop-shadow-[0_0_5px_rgba(6,182,212,0.3)]">
+                  <span className="text-cyan-200/80 text-[17px] sm:text-xl lg:text-2xl font-bold tracking-[0.05em] pl-[0.05em] drop-shadow-[0_0_5px_rgba(6,182,212,0.3)] whitespace-nowrap">
                     4つの提供価値
                   </span>
                 </div>
