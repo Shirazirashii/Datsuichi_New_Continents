@@ -25,7 +25,7 @@ export default function PrivacyPage() {
               </p>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   1. 個人情報取扱事業者の情報
                 </h2>
                 <div className="space-y-2 pl-1">
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   2. 収集する個人情報および収集方法
                 </h2>
                 <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   3. 個人情報の利用目的
                 </h2>
                 <div className="space-y-4">
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   4. 外部AIツールの利用について
                 </h2>
                 <div className="space-y-4">
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   5. 個人情報の第三者提供およびプロジェクトメンバー間の共有
                 </h2>
                 <div className="space-y-4">
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   6. コミュニティ参画メンバーの個人情報保護
                 </h2>
                 <p>
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   7. アクセス解析ツールについて
                 </h2>
                 <div className="space-y-4">
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   8. 個人情報の安全管理措置
                 </h2>
                 <p>
@@ -115,7 +115,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   9. 個人情報の開示・訂正・利用停止等
                 </h2>
                 <p>
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   10. お問い合わせ窓口
                 </h2>
                 <div className="space-y-2 pl-1">
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-slate-200 mt-10 mb-4">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-10 mb-4">
                   11. プライバシーポリシーの改定
                 </h2>
                 <div className="space-y-4">

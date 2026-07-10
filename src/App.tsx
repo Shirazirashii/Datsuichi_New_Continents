@@ -42,7 +42,7 @@ function Header() {
         <div className="w-full max-w-7xl mx-auto flex items-center justify-between lg:justify-start lg:gap-10 py-3 lg:py-[8px] px-4 md:px-8">
           {/* Left: Logo */}
           <Link to="/" className="shrink-0 flex items-center group">
-            <div className="relative h-[48px] lg:h-[62px] aspect-[1296/391] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
+            <div className="relative h-[54px] lg:h-[62px] aspect-[1296/391] shrink-0 transition-transform duration-300 group-hover:-translate-y-1 group-hover:opacity-90">
               <svg viewBox="0 0 1296 391" className="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <style>
@@ -92,7 +92,7 @@ function Header() {
           <div className="flex items-center ml-auto lg:ml-0 flex-none gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {/* Main Nav (Shows 3 on mobile, full list on desktop) */}
             <nav className="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 text-xs sm:text-sm md:text-base lg:text-[17px] font-bold whitespace-nowrap tracking-wide">
-              <Link to="/about" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ダツイチとは</Link>
+              <Link to="/about" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">私たちの向かう先</Link>
               <Link to="/projects" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">プロジェクト</Link>
               <Link to="/community" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">団体運営</Link>
               <Link to="/news" className="hidden lg:block text-white hover:text-cyan-400 transition-colors">ニュース</Link>
@@ -128,8 +128,8 @@ function Header() {
               <span className="text-white text-xl md:text-2xl font-bold group-hover:text-slate-300 transition-colors">トップページ</span>
             </Link>
             <Link to="/about" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
-              <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">About us</span>
-              <span className="text-white text-xl md:text-2xl font-bold group-hover:text-slate-300 transition-colors">ダツイチとは</span>
+              <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">New Continents</span>
+              <span className="text-white text-xl md:text-2xl font-bold group-hover:text-slate-300 transition-colors">私たちの向かう先</span>
             </Link>
             <Link to="/projects" onClick={() => setIsDrawerOpen(false)} className="group flex flex-col">
               <span className="text-cyan-400 text-xs font-medium tracking-wider mb-0.5">Project</span>

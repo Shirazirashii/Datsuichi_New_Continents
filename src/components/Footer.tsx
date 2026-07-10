@@ -10,7 +10,7 @@ export default function Footer() {
               <div className="text-sm font-medium text-white pb-3 mb-4 border-b border-slate-800">Sitemap</div>
               <div className="flex flex-wrap justify-start gap-6 text-sm font-medium text-white">
                 <Link to="/" className="hover:text-cyan-400 transition-colors">ホーム</Link>
-                <Link to="/about" className="hover:text-cyan-400 transition-colors">ダツイチとは</Link>
+                <Link to="/about" className="hover:text-cyan-400 transition-colors">私たちの向かう先</Link>
                 <Link to="/projects" className="hover:text-cyan-400 transition-colors">プロジェクト</Link>
                 <Link to="/community" className="hover:text-cyan-400 transition-colors">団体運営</Link>
                 <Link to="/news" className="hover:text-cyan-400 transition-colors">ニュース</Link>

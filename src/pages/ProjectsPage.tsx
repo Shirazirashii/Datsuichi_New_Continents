@@ -22,7 +22,7 @@ export default function ProjectsPage() {
       </div>
       <Projects isSinglePage={true} />
 
-      <div className="max-w-4xl mx-auto px-6 py-10">
+      <div className="max-w-4xl mx-auto px-6 pt-24 pb-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,16 +31,14 @@ export default function ProjectsPage() {
           className="space-y-8"
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 w-full">
-            <h3 className="text-2xl font-bold tracking-tight text-white flex items-center gap-3">
-              <Icon icon="pinhead:treasure-map" className="w-6 h-6 text-slate-400" />
+            <h3 className="text-2xl font-bold tracking-tight text-white">
               今後のロードマップ
             </h3>
           </div>
-          <div className="rounded-3xl bg-gradient-to-r from-slate-800/50 to-transparent border-l-4 border-l-[#D2B48C] p-8 space-y-4">
-            <p className="text-slate-300 text-lg leading-relaxed font-light">
-              個人事業主や地域コミュニティの案件をテーマに実践。将来的には有償案件化し「最強の実践者集団」の完成を目指します。
-            </p>
-          </div>
+          <p className="text-slate-300 text-lg leading-relaxed font-light">
+            個人事業主や地域コミュニティの案件をテーマに、現在は、プロボノとして活動しています。<br />
+            将来的には有償案件を取り扱い「真の実践型コミュニティ」を目指します。
+          </p>
           <div className="flex justify-end mt-4">
             <Link 
               to="/contact"

@@ -82,7 +82,7 @@ export default function FAQ({ isSinglePage = false }: FAQProps) {
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 bg-slate-900/30'}`}>
       <div className="max-w-4xl mx-auto space-y-16">
         {!isSinglePage && (
-          <div className="text-left">
+          <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">よくある質問</h2>
           </div>
         )}

@@ -46,14 +46,14 @@ export default function ClosedEntryButton() {
                 className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-slate-800 focus:outline-none"
                 aria-label="閉じる"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6" strokeWidth={2.5} />
               </button>
               
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-full bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 shrink-0">
                   <Clock className="w-6 h-6" />
                 </div>
-                <h3 className="text-cyan-400 font-bold text-xl md:text-2xl pr-8">
+                <h3 className="bg-clip-text text-transparent bg-gradient-to-br from-[#89E8D6] to-[#25A7CC] font-bold text-xl md:text-2xl pr-8">
                   次のエントリー期間までお待ちください。
                 </h3>
               </div>

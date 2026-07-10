@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 import ClosedEntryButton from './ClosedEntryButton';
 
 const targets = [
-  "自らを動かし、試行錯誤を楽しめる方。",
+  "自ら手を動かし、試行錯誤を楽しめる方。",
   "得られた知見や学びをメンバー間で積極的に共有できる方。",
   "目的達成のためのAIツール課金を厭わない方。"
 ];
@@ -12,8 +12,8 @@ export default function Target({ isSinglePage = false }: { isSinglePage?: boolea
   return (
     <section className={`px-6 ${isSinglePage ? "pt-16 pb-0" : "pt-16 pb-16 md:pb-32"}`}>
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">求めるメンバー像</h2>
+        <div className={`${isSinglePage ? "text-left" : "text-center"}`}>
+          <h2 className={`${isSinglePage ? "text-2xl" : "text-3xl md:text-4xl"} font-bold tracking-tight text-white`}>求めるメンバー像</h2>
         </div>
 
         <motion.div 
@@ -21,12 +21,12 @@ export default function Target({ isSinglePage = false }: { isSinglePage?: boolea
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-10 md:p-16 relative overflow-hidden"
+          className="w-full rounded-2xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-6 md:p-8 relative overflow-hidden"
         >
           {/* Subtle bg glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-900/20 blur-[80px] rounded-full pointer-events-none" />
           
-          <div className="relative z-10 flex flex-col gap-6 max-w-2xl mx-auto">
+          <div className={`relative z-10 flex flex-col gap-4 md:gap-5 max-w-2xl mx-auto ${isSinglePage ? '' : 'md:pl-16'}`}>
             {targets.map((target, idx) => (
               <motion.div 
                 key={idx}

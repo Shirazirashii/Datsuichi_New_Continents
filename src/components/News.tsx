@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
 import { CustomArrow, CustomArrowLeft } from './CustomArrow';
 import newsDay1Img from '../assets/datsuichi-news-day1.webp';
 import newsDay0Img from '../assets/datsuichi-news-day0.webp';
@@ -21,7 +22,7 @@ export const newsItems: NewsItem[] = [
     id: 'news-001-day2',
     date: '2026.07.04',
     category: 'REPORT',
-    title: 'Day2｜「アシスタント型」と「エージェント型」―Webサイトを磨き上げるプロフェッショナルたちの戦略。',
+    title: 'Day2｜Webサイトを磨き上げるプロフェッショナルたちの戦略。',
     images: [newsDay2Img],
     content: `<p>2026年7月4日。</p>
 <p>シーズン1のプロジェクト「オクトエイド」のWebサイト制作が中盤に差し掛かる中、今回は意見交換会（Day 2）を開催しました。</p>
@@ -106,10 +107,10 @@ export const newsItems: NewsItem[] = [
     id: 'news-003',
     date: '2026.06.06',
     category: 'RELEASE',
-    title: 'Day0｜自立駆動型のAI学習コミュニティ「ダツイチー新大陸」本格始動。',
+    title: 'Day0｜実践型のAI学習コミュニティ「ダツイチー新大陸」本格始動。',
     images: [newsDay0Img],
     content: `<p>2026年6月6日。</p>
-<p>AI勉強会「ダツイチ」は、新たなフェーズとなる「新大陸」に突入。本日は、その説明会を開催しました。新たな「ダツイチー新大陸」は、生成AIを単なる便利ツールとしてではなく、実際のビジネス課題を解決し、価値を創造するための「武器」として使いこなす自立駆動型の学習コミュニティです。</p>
+<p>AI勉強会「ダツイチ」は、新たなフェーズとなる「新大陸」に突入。本日は、その説明会を開催しました。新たな「ダツイチー新大陸」は、生成AIを単なる便利ツールとしてではなく、実際のビジネス課題を解決し、価値を創造するための「武器」として使いこなす実践型の学習コミュニティです。</p>
 <p class="text-white font-bold mt-6 mb-2">■「実案件」という真剣勝負の場へ</p>
 <p>従来のAI学習の多くは、架空のサンプルコードや定型的な課題の消化に留まりがちです。しかし、本コミュニティが重視するのは、実際に困りごとを抱えるクライアントの課題を解決する「実案件」へのコミットメントです。</p>
 <p class="font-bold mt-4">なぜ実案件なのか。</p>
@@ -202,8 +203,8 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 border-t border-slate-800/50'}`}>
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {!isSinglePage && (
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2 sm:mb-0">ニュース</h2>
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">ニュース</h2>
           </div>
         )}
         
@@ -271,9 +272,10 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
             >
               <button
                 onClick={() => setSelectedNews(null)}
-                className="absolute top-4 right-4 sm:top-5 sm:right-5 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors z-10"
+                className="absolute top-4 right-4 sm:top-5 sm:right-5 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-slate-800 focus:outline-none z-10"
+                aria-label="閉じる"
               >
-                ✕
+                <X className="w-6 h-6" strokeWidth={2.5} />
               </button>
 
               <div className="pt-6 sm:pt-8 mb-6 pr-0">
@@ -285,7 +287,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
                     {selectedNews.category}
                   </span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 tracking-tight leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#89E8D6] to-[#25A7CC] tracking-tight leading-snug">
                   {selectedNews.title}
                 </h3>
               </div>

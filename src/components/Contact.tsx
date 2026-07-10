@@ -133,7 +133,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               onSubmit={handleSubmit}
             >
               <div className="space-y-2">
-                <label htmlFor="name" className="text-slate-300 text-lg leading-relaxed font-light block">お名前</label>
+                <label htmlFor="name" className="text-slate-300 text-lg leading-relaxed font-bold block">お名前</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -146,7 +146,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="email" className="text-slate-300 text-lg leading-relaxed font-light block">メールアドレス</label>
+                <label htmlFor="email" className="text-slate-300 text-lg leading-relaxed font-bold block">メールアドレス</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -176,7 +176,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="message" className="text-slate-300 text-lg leading-relaxed font-light block">メッセージ</label>
+                <label htmlFor="message" className="text-slate-300 text-lg leading-relaxed font-bold block">メッセージ</label>
                 <textarea 
                   id="message" 
                   rows={5}

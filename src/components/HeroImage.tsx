@@ -32,7 +32,7 @@ export default function HeroImage({ src, alt }: HeroImageProps) {
         className={`absolute inset-0 w-full h-full object-cover z-10 transition-all ease-out ${
           isFirstLoad ? 'duration-[600ms]' : 'duration-0'
         } ${
-          isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-[10px]'
+          isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
         }`}
         fetchPriority="high"
       />
