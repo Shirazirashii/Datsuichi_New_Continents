@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { CustomArrow, CustomArrowLeft } from './CustomArrow';
 import newsDay1Img from '../assets/datsuichi-news-day1.webp';
 import newsDay0Img from '../assets/datsuichi-news-day0.webp';
 import newsOpenImg from '../assets/datsuichi-news-open.webp';
 import newsDay2Img from '../assets/datsuichi-news-day2.webp';
+import newsDay3Img from '../assets/datsuichi-news-day3.webp';
 
 export interface NewsItem {
   id: string;
@@ -18,6 +19,38 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-day3',
+    date: '2026.07.18',
+    category: 'REPORT',
+    title: 'Day3｜AIを武器に創り上げた「渾身のWebサイト」―驚愕の成果発表。',
+    images: [newsDay3Img],
+    content: `<p>2026年7月18日。</p>
+<p>シーズン1のプロジェクト「オクトエイド」のWebサイト制作は、大きな山場を迎えました。コミュニティメンバーたちが生成AIをパートナーとして伴走し、1ヵ月というわずかな期間で組み上げたWebサイトを発表。そこには、単なるAI学習を超えた「実務でも通用する成果物」が並びました。</p>
+<p class="text-white font-bold mt-6 mb-2">■個性が共鳴する、多様なAI活用のカタチ</p>
+<p>発表会では、7名のコミュニティメンバーが代表し、それぞれのセンスとこだわりで制作した「オクトエイド」のWebサイトを披露しました。驚くべきは、同じ要件定義から出発しながらも, AIの使い方一つでこれほどまでに多様なアウトプットが生まれたという事実でした。</p>
+<p>● 運用性と心理設計： がおちゃん氏は、ユーザーが「自分ごと化」できるストーリー性を重視しつつ、管理者がメンテナンスしやすい構造をAIと共に構築しました。</p>
+<p>● 技術的最適化と保守性：くぼっち氏は、モバイル環境での軽量化やセキュリティ対策を徹底。AIにHTML形式のスタイルガイドを作成させるなど、将来の保守まで見据えた「エンジニアリング・マインド」を見せました。</p>
+<p>● 親しみやすさと遊び心： あだっち氏は、AIで生成したタコのキャラクター（たこちゃん）をフックに、カードがめくれるような「遊び心のあるUI」を実装。心理的ハードルを下げる世界観を創出しました。</p>
+<p>● デザインの一貫性と試行錯誤：こばちゃん氏は、複数のAIを使い分け、色のトーンを統一。生成AI特有の質感や限界を分析しながら、「正当派なデザイン」を追求しました。</p>
+<p>● 構造的ブランディング： よこにい氏は、複数ページ構成を採用して回遊性を高め、ロゴや画像の統一感によって団体のブランドイメージを強化しました。</p>
+<p>● 圧倒的なコンテンツ量と動線： ヨコさん氏は、32枚ものAI生成画像を駆使したカード型レイアウトを構築。自己診断ツールやSNSへの動線設計まで、「即戦力の構成」を実現しました。</p>
+<p>● プロの本気：プロのWebデザイナーとして参加したトミー氏は、サイト単体ではなく、SNSやポスターまでを含む「エコシステム」としてのブランディングを提案。「パーツ生成はAIだが、全体を組み立てるのは人間の役割である」という、AI時代におけるクリエイターの本質的な価値を再定義しました。</p>
+<p class="text-white font-bold mt-6 mb-2">■「神は細部に宿る」</p>
+<p>もう1つの特筆すべき点は、Webサイトそのものだけでなく、付随する「提案書」や「運用・スタイルガイド」といった資料の質の高さです。これらも、ClaudeなどのAIを活用して作成されており、プロジェクトの運用において極めて有益な資産となりました。</p>
+<p>「AIを使いこなす」とは、単にコードを書かせることではなく、こうした実務に必要な周辺ドキュメントまでをも高精度に、かつ迅速に整備できる能力を指すのだと、メンバー全員が身をもって証明してくれました。</p>
+<p class="text-white font-bold mt-6 mb-2">■共創を支える「ビジネスの規律」</p>
+<p>コミュニティ内で、成果物の著作権をすべて「オクトエイド」側に譲渡することに合意しました。これにより、制作されたWebサイトやキャラクターを用いて、支援先団体（オクトエイド）が自由に活動できる体制が整いました。</p>
+<p>また、各作品のクオリティがあまりに高いため、評価・選定は「個人の感覚」ではなく、明確な「評価軸」に基づいて行うことも明示されました。こうしたビジネスとしての厳格な合意形成こそが、本コミュニティが「真の共創の場」である証明と言えます。</p>
+<p class="text-white font-bold mt-6 mb-2">■自動化のフロンティアへ</p>
+<p>プロジェクトの後半、次回Day 4からは、いよいよ「業務プロセスの自動化」に挑戦します。挑むのは、Instagram投稿の自動化ツールの開発です。難易度の高いミッションです。</p>
+<p>「全工程の完了を目指す者」もいれば、「特定の機能パーツの実装に注力する者」もいるでしょう。それぞれが「自分の現在地」からの成長を目指す ―本コミュニティらしいピアラーニングで、コミュニティメンバーのAIスキルをさらに深化していきます。</p>
+<p class="mt-6">未知の領域へと突き進む冒険者たち。<br />彼らが創り出すデジタル・ソリューションに乞うご期待ください。</p>
+<hr class="border-slate-800 my-6" />
+<p class="text-white font-bold">■今後のスケジュール</p>
+<p>● 7月25日： オクトエイド評価会（コンペティションによる最終審査）</p>
+<p>● 8月1日： プロジェクト「オクトエイド」｜Day 4（SNS投稿の自動化ツール構築フェーズ）キックオフ</p>`,
+  },
   {
     id: 'news-001-day2',
     date: '2026.07.04',
@@ -185,6 +218,7 @@ interface NewsProps {
 
 export default function News({ limit, isSinglePage = false }: NewsProps) {
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
   const displayedItems = limit ? newsItems.slice(0, limit) : newsItems;
 
   useEffect(() => {
@@ -198,6 +232,33 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
       }
     });
   }, []);
+
+  // クエリパラメータの 'newsId' に基づいて詳細表示を同期
+  useEffect(() => {
+    const newsId = searchParams.get('newsId');
+    if (newsId) {
+      const found = newsItems.find((item) => item.id === newsId);
+      if (found) {
+        setSelectedNews(found);
+      } else {
+        setSelectedNews(null);
+      }
+    } else {
+      setSelectedNews(null);
+    }
+  }, [searchParams]);
+
+  const handleOpen = (item: NewsItem) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('newsId', item.id);
+    setSearchParams(newParams);
+  };
+
+  const handleClose = () => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete('newsId');
+    setSearchParams(newParams);
+  };
 
   return (
     <section className={`px-6 ${isSinglePage ? 'pt-8 pb-0 md:pb-0' : 'py-12 md:py-24 border-t border-slate-800/50'}`}>
@@ -217,7 +278,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               viewport={{ once: true }}
               className="group block cursor-pointer"
-              onClick={() => setSelectedNews(item)}
+              onClick={() => handleOpen(item)}
             >
               <div className="flex flex-col sm:grid sm:grid-cols-[240px_1fr] items-start sm:items-baseline md:items-center gap-2 sm:gap-4 py-6 border-b border-slate-800 hover:border-slate-700 transition-colors">
                 <div className="flex flex-row sm:flex-row items-center sm:items-baseline md:items-center gap-4 sm:gap-8 shrink-0">
@@ -260,7 +321,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedNews(null)}
+            onClick={handleClose}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -271,7 +332,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                onClick={() => setSelectedNews(null)}
+                onClick={handleClose}
                 className="absolute top-4 right-4 sm:top-5 sm:right-5 text-slate-400 hover:text-white transition-colors p-2 rounded-full hover:bg-slate-800 focus:outline-none z-10"
                 aria-label="閉じる"
               >
@@ -313,7 +374,7 @@ export default function News({ limit, isSinglePage = false }: NewsProps) {
 
               <div className="flex justify-start mt-12 mb-4">
                 <button
-                  onClick={() => setSelectedNews(null)}
+                  onClick={handleClose}
                   className="group flex items-center gap-4 md:gap-5"
                 >
                   <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center text-white shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:scale-125 transform-gpu will-change-transform flex-shrink-0">
