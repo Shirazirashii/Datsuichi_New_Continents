@@ -30,10 +30,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
 
     setStatus('sending');
 
-    const params = new URLSearchParams();
-    params.append('name', name);
-    params.append('email', email);
-    params.append('message', message);
+    const payload = JSON.stringify({ name, email, message });
 
     try {
       // First attempt: try with standard CORS (which allows reading response)
@@ -41,9 +38,9 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
         method: 'POST',
         mode: 'cors',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'text/plain',
         },
-        body: params.toString(),
+        body: payload,
       });
 
       if (response.ok) {
@@ -75,9 +72,9 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
           method: 'POST',
           mode: 'no-cors',
           headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'text/plain',
           },
-          body: params.toString(),
+          body: payload,
         });
         
         // With 'no-cors', we cannot inspect the response, but since it did not throw an exception,
