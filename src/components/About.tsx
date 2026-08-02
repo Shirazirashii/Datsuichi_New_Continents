@@ -302,11 +302,7 @@ export default function About({ isSinglePage = false, showBenefitsOnly = false, 
         )}
 
         <div className="flex flex-col md:flex-row gap-8 lg:gap-16 items-start justify-between w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-100px" }}
+          <div 
             className={`w-full ${hideBenefits ? 'max-w-4xl mx-auto px-6 text-center md:text-center' : 'md:max-w-[460px] lg:max-w-[628px] xl:max-w-[836px] pl-3 md:pl-[max(12px,calc(50vw-460px))] xl:pl-[180px]'} space-y-6 text-slate-300 text-lg leading-relaxed font-light`}
           >
             {isSinglePage ? (
@@ -382,7 +378,7 @@ export default function About({ isSinglePage = false, showBenefitsOnly = false, 
                 </p>
               </div>
             )}
-          </motion.div>
+          </div>
           
           {!hideBenefits && (
             <motion.div 

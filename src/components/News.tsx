@@ -8,6 +8,7 @@ import newsDay0Img from '../assets/datsuichi-news-day0.webp';
 import newsOpenImg from '../assets/datsuichi-news-open.webp';
 import newsDay2Img from '../assets/datsuichi-news-day2.webp';
 import newsDay3Img from '../assets/datsuichi-news-day3.webp';
+import newsDay4Img from '../assets/datsuichi-news-day4.webp';
 
 export interface NewsItem {
   id: string;
@@ -19,6 +20,39 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-day4',
+    date: '2026.08.01',
+    category: 'REPORT',
+    title: 'Day4｜Webサイト・コンペティション決着。そして「業務自動化」の深淵へ。',
+    images: [newsDay4Img],
+    content: `<p>2026年8月1日。</p>
+<p>「ダツイチ―新大陸」は、最初の大きな山場である「Web制作フェーズ」の完結と、次なる挑戦である「Instagram運用自動化」のキックオフを迎えました。</p>
+<p>AIを「道具」から「仕組み」へと昇華させるための、より実践的で高度な思考が求められるフェーズへと突入します。</p>
+<p class="text-white font-bold mt-6 mb-2">■「想い」が形を成す、Webサイト・コンペの結果</p>
+<p>オクトエイドでの審査会（7/25開催）を経て、全10作品の中から上位入賞者が発表されました。評価基準は、単なる見た目の美しさだけではなく、「世界観・トーン＆マナー」「サイトの分かりやすさ」「行動への動線」「NGルールの回避（プレッシャーの排除）」「スマホでの見やすさ」という、ユーザー体験とクライアントの理念に深く根ざした5つの観点で採点されました。</p>
+<p>● 第1位 ヨコさん氏：アニメーションと豊富なイラストを駆使し、絵本のような温かい世界観を構築。「届けたい」という切実な想いが、AIスキルを凌駕し、技術的完成度と理念の体現を両立させた点が最高評価を得ました。</p>
+<p>● 第2位 シェフ氏：メンタルヘルスの観点から、安易な自己診断を下さないよう配慮。リスク管理というプロフェッショナルな視点が高く評価されました。</p>
+<p>● 第3位 トミー氏：SNSやポスターとの連動を意識したブランド設計の高さと, スマホユーザーを意識した操作性が光りました。</p>
+<p>今回のコンペは、参加者のスキルの高さを示すだけでなく、運営側にとっても「コンセプトの言語化」という新たな学びをもたらす「相互研鑽の場」となりました。</p>
+<p class="text-white font-bold mt-6 mb-2">■次なるミッション：「完全自動化」ではなく「最適化」</p>
+<p>Day4後半では、プロジェクトの第2フェーズである「Instagramコンテンツ自動作成システム」の構築が提示されました。目標は、2〜3日に1回の安定した投稿を維持しつつ、運用の手間を劇的に削減することです。</p>
+<p>けれど、真に目指すのは「人間を排除した自動化」ではありません。</p>
+<p>● カルーセル投稿案の自動生成： AIが4〜5枚の画像とキャプション（150〜300文字）を下書き。</p>
+<p>● 厳格な制約（ガードレール）： 医療行為への誘導や断定的な表現を避け、身近な相談を促す優しい言葉選びを徹底。</p>
+<p>● 複数人運用への対応： 生成されたコンテンツを管理者が確認・承認するプロセスの構築。</p>
+<p>AIが得意な「生成」と、人間が担うべき「責任と承認」を分離し、実務に耐えうる現実的なシステム設計が求められます。</p>
+<p class="text-white font-bold mt-6 mb-2">■「IPOフレームワーク」と「ヒューマン・イン・ザ・ループ」</p>
+<p>技術アドバイザーのカーリー氏から、業務を自動化するための知的アプローチとして、「IPO（Input / Process / Output）」による業務分析と、「モジュール化」の重要性が説かれました。業務全体を一気に自動化するのではなく、要素ごとに分解して考えることで、実現可能性を高める戦略です。</p>
+<p>また、現代のAI活用における重要概念である「ヒューマン・イン・ザ・ループ（人間による介在）」が提唱されました。これは、AIのループの中に意図的に人間による判断工程を組み込むことで、品質担保と責任の所在を明確にする考え方です。さらに、API利用のコストや保守性、ビジネスアカウントの要件まで考慮した「見積もり提案」までをミッションに含めるという、極めて実務的な要件が提示されました。</p>
+<p class="text-white font-bold mt-6 mb-2">■学びのプロセスこそが最大の成果</p>
+<p>「ダツイチ―新大陸」は、完成品のクオリティだけでなく、そこに至るまでの思考プロセスを重視しています。参加者は、ChatGPTやClaudeなどのAIとの「壁打ち」を繰り返し、自身の環境に合わせた最適な設計図を構築していきます。</p>
+<p>完璧な自動化システムを作り上げること自体が目的ではありません。業務をどう分解し、AIという武器をどこに配置すれば、ビジネスの課題を解決できるのか。この問いに対し、試行錯誤しながら自分なりの「答え」を導き出すプロセスこそが、自律性を育む糧となります。</p>
+<hr class="border-slate-800 my-6" />
+<p class="text-white font-bold">■今後のスケジュール</p>
+<p>● Day 5： 各自による自動化ツールの構築、および業務フロー設計。</p>
+<p>● Day 6： 業務プロセスの自動化戦略、システム構成案の成果発表。</p>`,
+  },
   {
     id: 'news-001-day3',
     date: '2026.07.18',
@@ -183,7 +217,7 @@ function NewsImage({ src, alt }: { src: string; alt: string; key?: any }) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="relative w-full aspect-[16/9] md:aspect-[21/9] max-h-[400px] overflow-hidden bg-slate-900/50">
+    <div className="relative w-full aspect-[16/9] overflow-hidden bg-slate-900/50">
       {/* 骨組み・ローダーアニメーション */}
       <div 
         className={`absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 bg-[length:200%_100%] animate-shimmer transition-opacity duration-500 ${
