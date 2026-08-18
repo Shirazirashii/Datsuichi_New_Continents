@@ -89,7 +89,7 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
               <div>
                 <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">支援期間</span>
                 <p className="text-lg font-medium">
-                  2026年6月～8月
+                  2026年6月～9月
                 </p>
               </div>
               <div>
