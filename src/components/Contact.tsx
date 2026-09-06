@@ -4,7 +4,7 @@ import { useState } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const GAS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbwj8rBbLlJ_saI4E3RQpioPNLzwJbxNoNL_Hy7rvuDQue0hPt_0oQAghHACqmUiE_Yz0g/exec";
+const GAS_WEBAPP_URL = "https://script.google.com/a/macros/datsuichi.com/s/AKfycbzvTrV7RRxPnY3_JfJnlUqaMmqveDrFzESmual36GdLtuml6KlqhPnNNQJss5iV-PpdOA/exec";
 
 interface ContactProps {
   isSinglePage?: boolean;
