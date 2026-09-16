@@ -74,20 +74,14 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
               <div className="space-y-4">
                 <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block">支援内容</span>
                 <p className="text-lg font-medium leading-relaxed">
-                  Webサイト構築、<br className="md:hidden" />SNS投稿の自動化ツール構築
+                  Webサイトおよび、Instagram投稿自動化ツール制作
                 </p>
               </div>
             </div>
             
-            <div className="mt-10 pt-8 border-t border-[#1A1A1A]/30 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="mt-10 pt-8 border-t border-[#1A1A1A]/30 flex flex-col sm:flex-row gap-8 sm:gap-12 md:gap-16">
               <div>
-                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">形式</span>
-                <p className="text-lg font-medium">
-                  コンペティション
-                </p>
-              </div>
-              <div>
-                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">支援期間</span>
+                <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">プロジェクト期間</span>
                 <p className="text-lg font-medium">
                   2026年6月～9月
                 </p>
@@ -95,8 +89,8 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
               <div>
                 <span className="text-[#1A1A1A]/70 text-sm font-medium tracking-wider block mb-3">ステータス</span>
                 <div className="flex items-center gap-2 font-bold text-lg animate-red-black-blink">
-                  <span className="rounded-full w-3 h-3 block animate-red-black-blink-bg" />
-                  進行中
+                  <span className="rounded-full w-3 h-3 block animate-red-black-blink-bg flex-shrink-0" />
+                  Web公開準備中・伴走支援中
                 </div>
               </div>
             </div>

@@ -11,6 +11,7 @@ import newsDay3Img from '../assets/datsuichi-news-day3.webp';
 import newsDay4Img from '../assets/datsuichi-news-day4.webp';
 import newsDay5Img from '../assets/datsuichi-news-day5.webp';
 import newsDay6Img from '../assets/datsuichi-news-day6.webp';
+import newsS1EndingImg from '../assets/datsuichi-news-s1-ending.webp';
 import newsWs1Img from '../assets/datsuishi-news-ws1-note.webp';
 
 export interface NewsItem {
@@ -23,6 +24,221 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-terms-revision',
+    date: '2026.09.17',
+    category: 'NOTICE',
+    title: '利用規約｜改定のお知らせ',
+    images: [],
+    content: `<p>平素より、ダツイチー新大陸の活動にご理解・ご協力いただきありがとうございます。<br />このたび、コミュニティ活動および受託プロジェクトの運営体制整備に伴い、利用規約の一部を改定いたします。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■主な改定内容</p>
+<p>● 有償サービスおよび個別契約の取扱いに関する事項の明確化</p>
+<p>● AIサービス利用時の個人情報・機密情報の取扱いに関する事項の追加</p>
+<p>● 受託プロジェクトの実績掲載に関する事項の追加</p>
+<p>● ワークショップ・イベントにおける写真・動画の利用に関する事項の追加</p>
+<p>● 損害賠償の範囲および免責事項の一部明確化</p>
+<p>● 利用規約を変更する際の事前周知に関する事項の明確化</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■改定予定日（効力発生日）</p>
+<p>2026年9月24日</p>
+<p class="mt-6">改定後の利用規約は、効力発生日以降、本サイトに掲載いたします。<br />今後ともダツイチー新大陸をよろしくお願いいたします。</p>`,
+  },
+  {
+    id: 'news-001-s1-ending',
+    date: '2026.09.12',
+    category: 'REPORT',
+    title: 'シーズン1｜難しかった...その先で得られたもの。 参加者の声から振り返る「プロジェクト・オクトエイド」',
+    images: [newsS1EndingImg],
+    content: `<p>ダツイチー新大陸シーズン1 「プロジェクト・オクトエイド」では、生成AIを活用したWebサイト制作から業務自動化ツールの構築まで、実際に手を動かしながら学ぶ「実践」に挑んできました。</p>
+<p>プロジェクト終了後のアンケートでは、回答者全員が活動に満足し、90％がシーズン2にも参加したいと回答してくれました。その一方で、70％が「難しかった」と感じていたことも分かりました。</p>
+<p>満足度は高い。けれど、決して簡単ではなかった。<br />この二つの結果から見えてきたのは、次の挑戦へとつながる大切なヒントでした。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 実践の手応え―満足度100％</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="全体満足度円グラフ: とても満足 70%、やや満足 30%、どちらともいえない 0%、やや不満 0%、不満 0%、サンプル数 n=10">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-cyan-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">全体満足度</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=10</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#06b6d4" stroke-width="26" stroke-dasharray="237.5 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#3b82f6" stroke-width="26" stroke-dasharray="101.8 339.3" stroke-dashoffset="-237.5" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">満足度</span>
+        <span class="text-2xl font-bold font-mono text-white leading-tight mt-1">100%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#06b6d4] flex-shrink-0"></span>
+          <span class="text-slate-200">とても満足</span>
+        </div>
+        <span class="font-mono font-bold text-cyan-400">70%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#3b82f6] flex-shrink-0"></span>
+          <span class="text-slate-200">やや満足</span>
+        </div>
+        <span class="font-mono font-bold text-blue-400">30%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-600 flex-shrink-0"></span>
+          <span>どちらともいえない</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-700 flex-shrink-0"></span>
+          <span>やや不満</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-800 flex-shrink-0"></span>
+          <span>不満</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>全体的な満足度は、「とても満足」が70％、「やや満足」が30％と、回答者全員から高評価を得ることができました。</p>
+<p>中でも印象に残った回は、Day3「Webデザインの成果共有」と、Day6「業務自動化ツールの成果共有」。AIの使い方をただ学ぶのではなく、自分たちの試行錯誤が「カタチ」となり、仲間と共有する。その達成感と学び、そして仲間から受ける刺激が、シーズン1を象徴する体験となりました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 次の冒険へ ―90%が「続けたい」</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="今後の参加意向円グラフ: ぜひ参加したい 90%、できれば参加したい 0%、わからない（未定） 0%、参加しない 10%、サンプル数 n=10">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-cyan-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">今後の参加意向</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=10</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#06b6d4" stroke-width="26" stroke-dasharray="305.4 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#f43f5e" stroke-width="26" stroke-dasharray="33.9 339.3" stroke-dashoffset="-305.4" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">参加希望</span>
+        <span class="text-2xl font-bold font-mono text-cyan-400 leading-tight mt-1">90%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#06b6d4] flex-shrink-0"></span>
+          <span class="text-slate-200">ぜひ参加したい</span>
+        </div>
+        <span class="font-mono font-bold text-cyan-400">90%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-600 flex-shrink-0"></span>
+          <span>できれば参加したい</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-700 flex-shrink-0"></span>
+          <span>わからない（未定）</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#f43f5e] flex-shrink-0"></span>
+          <span class="text-slate-200">参加しない</span>
+        </div>
+        <span class="font-mono font-bold text-rose-400">10%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>ダツイチー新大陸の今後の活動について、90％が「ぜひ参加したい」と回答しました。<br />シーズン1での挑戦は決して容易ではありませんでした。それでもなお、多くの回答者がシーズン2への参加を希望してくれました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■「難しかった」―70％が感じたハードル</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="プロジェクトの難易度円グラフ: 難しすぎた 40%、少し難しかった 30%、ちょうどよかった 30%、易しすぎた 0%、サンプル数 n=10">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-amber-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">プロジェクトの難易度</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=10</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(245,158,11,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#f43f5e" stroke-width="26" stroke-dasharray="135.7 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#f59e0b" stroke-width="26" stroke-dasharray="101.8 339.3" stroke-dashoffset="-135.7" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#14b8a6" stroke-width="26" stroke-dasharray="101.8 339.3" stroke-dashoffset="-237.5" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">難しかった</span>
+        <span class="text-2xl font-bold font-mono text-amber-400 leading-tight mt-1">70%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#f43f5e] flex-shrink-0"></span>
+          <span class="text-slate-200">難しすぎた</span>
+        </div>
+        <span class="font-mono font-bold text-rose-400">40%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#f59e0b] flex-shrink-0"></span>
+          <span class="text-slate-200">少し難しかった</span>
+        </div>
+        <span class="font-mono font-bold text-amber-400">30%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#14b8a6] flex-shrink-0"></span>
+          <span class="text-slate-200">ちょうどよかった</span>
+        </div>
+        <span class="font-mono font-bold text-teal-400">30%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-600 flex-shrink-0"></span>
+          <span>易しすぎた</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>全体の満足度は高かった一方で、「難しすぎた」が40％、「少し難しかった」が30%と、全体の70%が「難易度の高さ」を実感していました。「制作物の難易度が、最初から高すぎた」「画像生成が鬼門だった」といった声もあり、課題設定や一部の制作工程に大きなハードルがあったのも分かりました。</p>
+<p>けれど、思うように作れなかった悔しさから「もっと生成AIを使わなければ」と感じた方、仲間のAI活用を見て「大変刺激的だった」と振り返った方もいました。</p>
+<p>単純に難易度を下げるのではなく、挑戦のレベルはそのままに、一歩目を踏み出しやすくすること。シーズン2を設計する上での大きな気づきとなりました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■参加者の声（抜粋）</p>
+<p>アンケートでは、シーズン1で感じた参加者のリアルな声も寄せられました。</p>
+<p>Voice 1<br /><strong class="text-white font-bold">「めちゃくちゃ満足度とクオリティが高い運営でした。ありがとうございました。」</strong></p>
+<p>Voice 2<br /><strong class="text-white font-bold">「ダツイチに参加するまでは、AIをほぼ使って来なかった状態から参加してモチベが上がりAIのスキルも上がったので、非常に良い会だと思っております。」</strong></p>
+<p>Voice 3<br /><strong class="text-white font-bold">「作る制作物の難易度が最初から高すぎるかなと思いました。」</strong></p>
+<p>Voice 4<br /><strong class="text-white font-bold">「ものすごく上手に活用されているのを見て大変刺激的でした。」</strong></p>
+<p>自分と違うAIの使い方を知り、「そんなやり方もあるのか」と気づく。そこから得た知見を仕事や活動へ持ち帰り、試してみる。独学では得にくい、仲間同士で学び合う「ピアラーニング」。コミュニティが大事にしている、その学びの姿勢も再確認しました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ ご要望 ―運営側の学び</p>
+<p>今回のアンケートでは、以下のご要望もいただきました。</p>
+<p>● <strong class="text-white font-bold">スモールステップの導入</strong>： 全員が確実に達成できる小さめの目標・制作物から始め、より高度な課題へ段階的に進めるプロセスの設計。</p>
+<p>● <strong class="text-white font-bold">ライトな座談会</strong>： 「交流を増やしたい」という40%の声に応え、希望者が実務や副業でのAI活用事例を共有し合える「ゆるっと会」の増設。</p>
+<p>● <strong class="text-white font-bold">難所を乗り越えるピンポイント補講</strong>： 画像生成やセキュリティ、ツール制作・連携など、つまずきや関心が寄せられたテーマに特化した単科勉強会の開催。</p>
+<p class="mt-6">多くの前向きなご意見とともに、今後の活動に向けた貴重なご要望もいただきました。<br />いただいた声を真摯に受け止め、今後のプロジェクト運営の参考とさせていただきます。</p>
+<p class="mt-6">アンケートにご協力いただいた皆さま、改めてありがとうございました！<br />シーズン2にて、またお会いしましょう！</p>`,
+  },
   {
     id: 'news-001-day6',
     date: '2026.08.29',
@@ -242,7 +458,7 @@ export const newsItems: NewsItem[] = [
   {
     id: 'news-002',
     date: '2026.06.13',
-    category: 'RELEASE',
+    category: 'NOTICE',
     title: 'AI学習コミュニティ「ダツイチー新大陸」のホームページを公開しました。',
     images: [newsOpenImg],
     content: `<p>このたび、私たち「ダツイチ！」は、活動を次なるフェーズへと移し、新たに「ダツイチ―新大陸」として本格始動しました。それに伴い、公式ホームページも新規開設いたしました。</p>
@@ -263,7 +479,7 @@ export const newsItems: NewsItem[] = [
   {
     id: 'news-003',
     date: '2026.06.06',
-    category: 'RELEASE',
+    category: 'REPORT',
     title: 'Day0｜実践型のAI学習コミュニティ「ダツイチー新大陸」本格始動。',
     images: [newsDay0Img],
     content: `<p>2026年6月6日。</p>

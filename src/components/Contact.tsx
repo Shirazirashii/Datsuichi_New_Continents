@@ -33,57 +33,20 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
     const payload = JSON.stringify({ name, email, message });
 
     try {
-      // First attempt: try with standard CORS (which allows reading response)
-      const response = await fetch(GAS_WEBAPP_URL, {
+      await fetch(GAS_WEBAPP_URL, {
         method: 'POST',
-        mode: 'cors',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain',
         },
         body: payload,
       });
 
-      if (response.ok) {
-        let isSuccess = true;
-        try {
-          const data = await response.json();
-          if (data && (data.result === 'error' || data.status === 'error' || data.success === false)) {
-            isSuccess = false;
-          }
-        } catch (jsonErr) {
-          // If response body is not JSON, we still treat response.ok as success
-        }
+      setStatus('success');
 
-        if (isSuccess) {
-          setStatus('success');
-        } else {
-          setStatus('error');
-        }
-      } else {
-        // If the server explicitly rejected the request (e.g. 4xx, 5xx), don't fallback to no-cors
-        setStatus('error');
-      }
     } catch (err) {
-      console.warn('CORS request failed, falling back to no-cors mode:', err);
-      
-      // Fallback: Try with 'no-cors' mode. The request will still be sent and processed by GAS.
-      try {
-        await fetch(GAS_WEBAPP_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain',
-          },
-          body: payload,
-        });
-        
-        // With 'no-cors', we cannot inspect the response, but since it did not throw an exception,
-        // the request has been successfully dispatched to the GAS endpoint.
-        setStatus('success');
-      } catch (fallbackErr) {
-        console.error('Submission failed in both cors and no-cors modes:', fallbackErr);
-        setStatus('error');
-      }
+      console.error('Submission failed:', err);
+      setStatus('error');
     }
   };
 
@@ -196,7 +159,7 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
                   disabled={status === 'sending'}
                 />
                 <label htmlFor="agree" className="text-slate-300 text-sm sm:text-base leading-relaxed font-light cursor-pointer select-none">
-                  <Link to="/privacy" className="text-cyan-400 hover:underline">プライバシーポリシー</Link>に同意する
+                  <Link to="/privacy" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">プライバシーポリシー</Link>に同意する
                 </label>
               </div>
 
