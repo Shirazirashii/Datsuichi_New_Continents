@@ -59,7 +59,7 @@ export default function ClosedEntryButton() {
               </div>
               
               <p className="text-slate-300 text-base font-light leading-relaxed">
-                コミュニティへの参加をご検討いただき、誠にありがとうございます。たいへん恐縮ではありますが、現在、プロジェクト進行中のため、参加を制限しております。
+                コミュニティへの参加をご検討いただき、誠にありがとうございます。たいへん恐縮ではありますが、現在、プロジェクト準備中のため、参加を制限しております。
               </p>
             </motion.div>
           </motion.div>

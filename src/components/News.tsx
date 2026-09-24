@@ -13,6 +13,7 @@ import newsDay5Img from '../assets/datsuichi-news-day5.webp';
 import newsDay6Img from '../assets/datsuichi-news-day6.webp';
 import newsS1EndingImg from '../assets/datsuichi-news-s1-ending.webp';
 import newsWs1Img from '../assets/datsuishi-news-ws1-note.webp';
+import newsWs1ResultImg from '../assets/datsuichi-news-ws1-result.webp';
 
 export interface NewsItem {
   id: string;
@@ -24,6 +25,219 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-ws1-result',
+    date: '2026.09.19',
+    category: 'REPORT',
+    title: '「え、喋るだけ？」その先に生まれた一冊。初の生成AIワークショップを振り返る',
+    images: [newsWs1ResultImg],
+    content: `<p>2026年9月16日<br />大阪「ダツイチー新大陸」初のリアルイベントとなる生成AIワークショップを開催しました。<br />テーマは、<strong class="text-white font-bold">「え、喋るだけ？」</strong>。<br />PC操作や難しいプロンプトを使わず、スマートフォンと音声入力を使ってAIと対話し、自分の思い出や経験を掘り下げる。そして最後には、イラスト付きの「私の一冊」が生まれる。AIを学ぶ前に、まずはその面白さを体験する。そんな90分に、16名の皆さまが参加してくれました。<br />終了後のアンケートから、参加者の皆さまが感じた「驚き」と「ワクワク」を振り返ります。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 初のリアルイベント ― 満足度100％</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="全体満足度円グラフ: 大変満足 87.5%、満足 12.5%、普通 0%、やや不満 0%、不満 0%、サンプル数 n=16">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-cyan-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">全体満足度</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=16</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#06b6d4" stroke-width="26" stroke-dasharray="296.9 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#3b82f6" stroke-width="26" stroke-dasharray="42.4 339.3" stroke-dashoffset="-296.9" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">満足度</span>
+        <span class="text-2xl font-bold font-mono text-cyan-400 leading-tight mt-1">100%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#06b6d4] flex-shrink-0"></span>
+          <span class="text-slate-200">大変満足</span>
+        </div>
+        <span class="font-mono font-bold text-cyan-400">87.5%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#3b82f6] flex-shrink-0"></span>
+          <span class="text-slate-200">満足</span>
+        </div>
+        <span class="font-mono font-bold text-blue-400">12.5%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-600 flex-shrink-0"></span>
+          <span>普通</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-700 flex-shrink-0"></span>
+          <span>やや不満</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-800 flex-shrink-0"></span>
+          <span>不満</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>ワークショップ全体の満足度は、「大変満足」が87.5％、「満足」が12.5％。<br /><strong class="text-white font-bold">参加者全員から「満足」以上の回答をいただきました。</strong><br />今回大切にしていたのは、生成AIについて詳しく学ぶことよりも、まずは「触ってみる」「自分でもできると感じる」こと。初めてのリアルイベントということもあり、私たち運営メンバーにとっても手探りでの挑戦でした。だからこそ、参加者の皆さまに、AIの面白さを体験していただけたことを嬉しく思います。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 心が動いた二つの瞬間 ― 「喋るだけ」と「私の一冊」</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="最も「ワクワクした・面白い・感動した」瞬間円グラフ: スマホで自分だけの『私の一冊』が完成した時 56.3%、キーボードを使わず『喋るだけ』で入力できた時 25.0%、GeminiからNotebookへバトンタッチした時 6.3%、読み手やプロンプトで、作品のテイストが変わった時 6.3%、これからのAIの向き合い方を考え合えた時 6.3%、サンプル数 n=16">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-cyan-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">最も「ワクワクした・面白い・感動した」瞬間</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=16</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#06b6d4" stroke-width="26" stroke-dasharray="191.0 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#3b82f6" stroke-width="26" stroke-dasharray="84.8 339.3" stroke-dashoffset="-191.0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#8b5cf6" stroke-width="26" stroke-dasharray="21.4 339.3" stroke-dashoffset="-275.8" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#10b981" stroke-width="26" stroke-dasharray="21.4 339.3" stroke-dashoffset="-297.2" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#f59e0b" stroke-width="26" stroke-dasharray="20.7 339.3" stroke-dashoffset="-318.6" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">最多回答</span>
+        <span class="text-2xl font-bold font-mono text-cyan-400 leading-tight mt-1">56.3%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#06b6d4] flex-shrink-0"></span>
+          <span class="text-slate-200">スマホで自分だけの『私の一冊』が完成した時</span>
+        </div>
+        <span class="font-mono font-bold text-cyan-400 shrink-0 ml-2">56.3%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#3b82f6] flex-shrink-0"></span>
+          <span class="text-slate-200">キーボードを使わず『喋るだけ』で入力できた時</span>
+        </div>
+        <span class="font-mono font-bold text-blue-400 shrink-0 ml-2">25.0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#8b5cf6] flex-shrink-0"></span>
+          <span class="text-slate-200">GeminiからNotebookへバトンタッチした時</span>
+        </div>
+        <span class="font-mono font-bold text-purple-400 shrink-0 ml-2">6.3%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#10b981] flex-shrink-0"></span>
+          <span class="text-slate-200">読み手やプロンプトで、作品のテイストが変わった時</span>
+        </div>
+        <span class="font-mono font-bold text-emerald-400 shrink-0 ml-2">6.3%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#f59e0b] flex-shrink-0"></span>
+          <span class="text-slate-200">これからのAIの向き合い方を考え合えた時</span>
+        </div>
+        <span class="font-mono font-bold text-amber-400 shrink-0 ml-2">6.3%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>最も多かったのは、「スマホで自分だけの『私の一冊』が完成した時」が56.3％。<br />続いて、「キーボードを使わず『喋るだけ』で入力できた時」25.0％となりました。<br />スマートフォンに向かって、思い出や経験を話してみる。AIとの対話の中で、忘れていた記憶や、自分でも気づいていなかった想いが少しずつ言葉になっていく。そして、その対話から生まれた物語が、イラスト付きの一冊へと姿を変える。<br /><strong class="text-white font-bold">「喋るだけ」という驚きと、「自分の物語が形になった」という喜び。</strong><br />この二つの体験が、今回の高い満足度につながったのだと思います。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 「私の一冊」が残したもの</p>
+<p>「私の一冊」を作ってみてどう感じたかを尋ねたところ、</p>
+<p>● 自分の思い出を形にできて嬉しかった：12名</p>
+<p>● 生成AIを身近に感じた：10名</p>
+<p>● また別のテーマで作ってみたいと思った：10名</p>
+<p>● 家族や友人に見せたい・共有したいと思った：9名</p>
+<p>● 自分では気づかなかった思いや記憶を発見できた：7名</p>
+<p>参加者自身が旅した場所、経験した出来事、その時に感じた気持ち。<br />完成した『私の一冊』には、参加者それぞれの経験や想いが詰まっていました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 参加者の声（抜粋）</p>
+<p>Voice 1<br /><strong class="text-white font-bold">「『AIでワクワクを！』というコンセプトがとても素敵で、しっかり体現されていました！」</strong></p>
+<p>Voice 2<br /><strong class="text-white font-bold">「難しくなくて、皆で楽しめてとても良い体験になりました」</strong></p>
+<p>Voice 3<br /><strong class="text-white font-bold">「作っているうちに、自分でも気づかない思いを発見できました。とっても楽しかったです！」</strong></p>
+<p>「AIの面白さを伝えたい」という想いで企画したワークショップ。<br />いただいたご感想から、その想いが伝わったことを実感しました。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 16人全員が「使ってみたい」</p>
+<div class="my-6 p-4 sm:p-6 rounded-2xl bg-transparent border border-slate-800/40" role="img" aria-label="生成AIを使ってみたい気持ちの変化円グラフ: とても使ってみたくなった 87.5%、少し使ってみたくなった 12.5%、参加前とあまり変わらない 0%、まだ難しそうだと感じた 0%、以前より難しく感じた 0%、サンプル数 n=16">
+  <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/40">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-4 bg-cyan-400 rounded-full inline-block"></span>
+      <span class="font-bold text-white text-sm sm:text-base">生成AIを使ってみたい気持ちの変化</span>
+    </div>
+    <span class="text-xs font-mono text-slate-400 bg-slate-900/60 px-2.5 py-0.5 rounded border border-slate-800/50">n=16</span>
+  </div>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 py-2">
+    <div class="relative w-48 h-48 sm:w-52 sm:h-52 flex-shrink-0">
+      <svg viewBox="0 0 160 160" class="w-full h-full transform -rotate-90 filter drop-shadow-[0_0_12px_rgba(6,182,212,0.15)]">
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#1e293b" stroke-width="26" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#06b6d4" stroke-width="26" stroke-dasharray="296.9 339.3" stroke-dashoffset="0" />
+        <circle cx="80" cy="80" r="54" fill="none" stroke="#3b82f6" stroke-width="26" stroke-dasharray="42.4 339.3" stroke-dashoffset="-296.9" />
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span class="text-xs text-slate-400 font-medium leading-none">使ってみたい</span>
+        <span class="text-2xl font-bold font-mono text-cyan-400 leading-tight mt-1">100%</span>
+      </div>
+    </div>
+    <div class="w-full sm:w-auto flex-1 max-w-sm space-y-2 text-xs sm:text-sm">
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#06b6d4] flex-shrink-0"></span>
+          <span class="text-slate-200">とても使ってみたくなった</span>
+        </div>
+        <span class="font-mono font-bold text-cyan-400">87.5%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/40 border border-slate-800/50">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-[#3b82f6] flex-shrink-0"></span>
+          <span class="text-slate-200">少し使ってみたくなった</span>
+        </div>
+        <span class="font-mono font-bold text-blue-400">12.5%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-600 flex-shrink-0"></span>
+          <span>参加前とあまり変わらない</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-700 flex-shrink-0"></span>
+          <span>まだ難しそうだと感じた</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+      <div class="flex items-center justify-between py-1.5 px-3 rounded-lg bg-slate-900/20 border border-slate-800/30 text-slate-400">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-slate-800 flex-shrink-0"></span>
+          <span>以前より難しく感じた</span>
+        </div>
+        <span class="font-mono">0%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<p>ワークショップ終了後の「生成AIを使ってみたい気持ち」について尋ねると、参加者全員が、生成AIの活用に前向きな回答をしてくれました。<br />また、気持ちだけでなく、「これから生成AIを使ってやってみたいこと」として、ビジネスや副業、文章・SNS、画像・動画、プレゼン資料、挿絵入りの本づくりなど、具体的なアイデアも多く寄せられました。</p>
+<p><strong class="text-white font-bold">「難しそう」から、「ちょっと面白そう」へ。<br />そして、「次は、こんなこともやってみたい」へ。</strong></p>
+<p class="mt-6">この小さな変化が、次の一歩を踏み出すきっかけになればと思います。</p>
+<p class="text-white font-bold text-base sm:text-lg mt-6 mb-2">■ 次の冒険に向けて</p>
+<p>今回のアンケートでは、16名中15名が「次回のワークショップ案内を受け取りたい」と回答してくれました。その一方で、スマートフォンの操作方法や作業時間などについて、今後の改善につながるご意見もいただきました。<br />いただいた声は、これからのイベントづくりにしっかりと活かしていきます。</p>
+<p class="mt-6">AIを一人で学ぶのではなく、誰かと一緒に触ってみる。<br />驚いたことや発見したことを共有する。<br />そして、そこから次の「やってみたい」が生まれていく。<br />「ダツイチー新大陸」は、これからもそんなワクワクをつくっていきます。</p>
+<p class="mt-6">今回のワークショップにご協力・ご参加いただいたすべての皆さまに感謝を！<br />また次のイベントで、お会いしましょう！</p>`,
+  },
   {
     id: 'news-001-terms-revision',
     date: '2026.09.17',
@@ -511,10 +725,10 @@ export const newsItems: NewsItem[] = [
     id: 'news-004',
     date: '2026.05.20',
     category: 'NOTICE',
-    title: 'ダツイチー新大陸｜プレエントリーの受付を開始しました。',
+    title: 'ダツイチー新大陸｜プレエントリー受付開始。',
     images: [],
-    content: `<p>AI学習コミュニティ「ダツイチ—新大陸」のプレエントリー受付を開始いたしました。</p>
-<p>「独学でのスキルアップに限界を感じている方」「実務で使えるAI活用スキルを身につけたい方」「仲間と共に高め合える環境を求めている方」のエントリーを心よりお待ちしております。</p>
+    content: `<p>AI学習コミュニティ「ダツイチ—新大陸」のプレエントリー受付を開始しました。</p>
+<p>独学でのスキルアップに限界を感じている方、実務で使えるAIスキルを身につけたい方、仲間と共に切磋琢磨できる環境を求めている方。多くのエントリーを心よりお待ちしております。</p>
 <p>詳細やご質問は、本サイト内の<a href="/contact" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">お問い合わせ</a>フォームよりお気軽にご連絡ください。</p>`
   }
 ];
