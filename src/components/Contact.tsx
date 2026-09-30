@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,21 +16,39 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
   const [emailTouched, setEmailTouched] = useState(false);
   const [message, setMessage] = useState('');
   const [agree, setAgree] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const formLoadedAt = useRef<number>(Date.now());
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isEmailValid = emailRegex.test(email);
-  const showEmailError = emailTouched && email.trim() !== '' && !isEmailValid;
+  const isNameTooLong = name.length > 100;
+  const isEmailTooLong = email.length > 254;
+  const isMessageTooLong = message.length > 3000;
+  const showEmailError = isEmailTooLong || (emailTouched && email.trim() !== '' && !isEmailValid);
 
-  const isFormValid = name.trim() !== '' && isEmailValid && message.trim() !== '' && agree;
+  const isFormValid = name.trim() !== '' && !isNameTooLong && isEmailValid && !isEmailTooLong && message.trim() !== '' && !isMessageTooLong && agree;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid || status === 'sending') return;
 
+    // ① ハニーポット判定 ＆ ② タイムトラップ判定（3秒未満の機械的送信を遮断）
+    if (honeypot !== '' || Date.now() - formLoadedAt.current < 3000) {
+      setStatus('success');
+      return;
+    }
+
+    // ④ 送信データのクレンジング（制御文字・ゼロ幅文字の除去および前後空白トリム）
+    const cleanName = name.replace(/[\x00-\x1F\x7F\u200B-\u200D\uFEFF]/g, '').trim();
+    const cleanEmail = email.replace(/[\x00-\x1F\x7F\u200B-\u200D\uFEFF]/g, '').trim();
+    const cleanMessage = message.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F\u200B-\u200D\uFEFF]/g, '').trim();
+
+    if (!cleanName || !cleanEmail || !cleanMessage) return;
+
     setStatus('sending');
 
-    const payload = JSON.stringify({ name, email, message });
+    const payload = JSON.stringify({ name: cleanName, email: cleanEmail, message: cleanMessage });
 
     try {
       await fetch(GAS_WEBAPP_URL, {
@@ -97,12 +115,25 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all"
+                  className={`w-full bg-slate-900 border rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:ring-1 transition-all ${
+                    isNameTooLong 
+                      ? 'border-red-500/60 focus:border-red-500 focus:ring-red-500' 
+                      : 'border-slate-800 focus:border-cyan-500 focus:ring-cyan-500'
+                  }`}
                   placeholder="脱　一郎"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   disabled={status === 'sending'}
                 />
+                {isNameTooLong && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-400 text-sm font-light mt-1 pl-1"
+                  >
+                    お名前は100文字以内で入力してください。（現在：{name.length}/100文字）
+                  </motion.p>
+                )}
               </div>
               
               <div className="space-y-2">
@@ -130,7 +161,9 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-red-400 text-sm font-light mt-1 pl-1"
                   >
-                    有効なメールアドレスの形式ではありません。
+                    {isEmailTooLong
+                      ? `メールアドレスは254文字以内で入力してください。（現在：${email.length}/254文字）`
+                      : '有効なメールアドレスの形式ではありません。'}
                   </motion.p>
                 )}
               </div>
@@ -140,15 +173,38 @@ export default function Contact({ isSinglePage = false }: ContactProps) {
                 <textarea 
                   id="message" 
                   rows={5}
-                  className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all resize-none"
+                  className={`w-full bg-slate-900 border rounded-xl px-4 py-3 text-slate-200 text-lg leading-relaxed font-light focus:outline-none focus:ring-1 transition-all resize-none ${
+                    isMessageTooLong 
+                      ? 'border-red-500/60 focus:border-red-500 focus:ring-red-500' 
+                      : 'border-slate-800 focus:border-cyan-500 focus:ring-cyan-500'
+                  }`}
                   placeholder="ここにメッセージを入力してください"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   disabled={status === 'sending'}
                 ></textarea>
+                {isMessageTooLong && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-400 text-sm font-light mt-1 pl-1"
+                  >
+                    メッセージは3000文字以内で入力してください。（現在：{message.length}/3000文字）
+                  </motion.p>
+                )}
               </div>
 
               <div className="flex items-center justify-center gap-2 pt-2 pb-4">
+                <input
+                  type="text"
+                  name="company_url"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="absolute -left-[9999px] w-0 h-0 opacity-0 pointer-events-none"
+                />
                 <input 
                   type="checkbox" 
                   id="agree" 

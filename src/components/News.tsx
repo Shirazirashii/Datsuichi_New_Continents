@@ -15,6 +15,9 @@ import newsS1EndingImg from '../assets/datsuichi-news-s1-ending.webp';
 import newsWs1Img from '../assets/datsuishi-news-ws1-note.webp';
 import newsWs1ResultImg from '../assets/datsuichi-news-ws1-result.webp';
 
+const s2OpenAsset = import.meta.glob('../assets/datsuichi-news-s2-open.webp', { eager: true, import: 'default' }) as Record<string, string>;
+const newsS2OpenImg = s2OpenAsset['../assets/datsuichi-news-s2-open.webp'] || '/src/assets/datsuichi-news-s2-open.webp';
+
 export interface NewsItem {
   id: string;
   date: string;
@@ -25,6 +28,20 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-s2-open',
+    date: '2026.10.01',
+    category: 'NOTICE',
+    title: '「ダツイチー新大陸」シーズン２｜エントリー受付開始。',
+    images: [newsS2OpenImg],
+    content: `<p>10月1日。<br />本日から「ダツイチ—新大陸」シーズン２のエントリー受付を開始しました。</p>
+<p>シーズン2で挑むのは、<strong class="text-white font-bold">「AI総務部プロトタイプ構築」</strong>。<br />AIを使って事務・管理業務を仕組み化し、クライアントが本業に集中し、将来的な大規模案件の獲得にも備えられるよう、ビジネスの基盤強化を目指します。<br />前半は、ビジネス課題の深掘りや業務設計、AI化ポイントの抽出などを行う「要件定義フェーズ」<br />後半は、要件定義に基づいて業務プロセスを設計し、自動化ツールのモックアップやプロトタイプを制作する「開発・実装フェーズ」</p>
+<p><strong class="text-white font-bold">「構想」を「カタチ」にする</strong>プロジェクト。<br />独学でのスキルアップに限界を感じている方、実務で使えるAIスキルを身につけたい方、仲間と共に切磋琢磨できる環境を求めている方。<br />「考える側」も「作る側」も大歓迎です。多くのエントリーを心よりお待ちしています！</p>
+<p class="text-white font-bold mt-6 mb-2">■シーズン２参加申込：<a href="https://docs.google.com/forms/d/e/1FAIpQLSf2hpq4zWihRRS1kDau2jDcYg4YaE1cTASqF2JEWeq9Fq_lGA/viewform" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 transition-colors">エントリーフォーム</a></p>
+<p class="text-white font-bold mt-6 mb-2">■今後のスケジュール：</p>
+<p>● 10月10日： エントリー締切。</p>
+<p>● 10月17日： プロジェクト「AI総務部プロトタイプ構築」｜Day 1（要件定義フェーズ）キックオフ。</p>`,
+  },
   {
     id: 'news-001-ws1-result',
     date: '2026.09.19',

@@ -106,6 +106,7 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
           </motion.div>
 
           {/* PN 001 */}
+          {isSinglePage && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -161,6 +162,7 @@ export default function Projects({ isSinglePage = false }: ProjectsProps) {
               </div>
             </div>
           </motion.div>
+          )}
           
           {!isSinglePage && (
             <motion.div 
