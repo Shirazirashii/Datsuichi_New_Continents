@@ -3,8 +3,6 @@ import About from '../components/About';
 import Target from '../components/Target';
 import Projects from '../components/Projects';
 import News from '../components/News';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (

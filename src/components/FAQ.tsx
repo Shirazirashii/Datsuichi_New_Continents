@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState } from 'react';
-import { ChevronDown, MessageCircleQuestion } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {

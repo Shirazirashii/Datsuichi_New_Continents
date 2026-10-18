@@ -2,7 +2,6 @@ import Projects from '../components/Projects';
 import { motion } from 'motion/react';
 import projectImg from '../assets/datsuichi-project.webp';
 import { Link } from 'react-router-dom';
-import { Icon } from '@iconify/react';
 import { CustomArrow } from '../components/CustomArrow';
 import HeroImage from '../components/HeroImage';
 

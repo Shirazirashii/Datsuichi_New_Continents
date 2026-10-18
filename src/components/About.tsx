@@ -49,7 +49,6 @@ export default function About({ isSinglePage = false, showBenefitsOnly = false, 
   const [modalActiveId, setModalActiveId] = useState<number | null>(null);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const isAnyHovered = hoveredId !== null;
   const isAnyActiveOrHovered = activeId !== null || hoveredId !== null;
 
   const handleButtonClick = (id: number) => {

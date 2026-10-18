@@ -1,9 +1,7 @@
 import { motion } from 'motion/react';
-import { Target, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import orgImg from '../assets/datsuichi-community.webp';
 import ClosedEntryButton from '../components/ClosedEntryButton';
-import { Icon } from '@iconify/react';
 import HeroImage from '../components/HeroImage';
 import { CustomArrow } from '../components/CustomArrow';
 

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="pt-10 pb-4 md:pb-3 border-t border-slate-900 bg-slate-950/50">
       <div className="max-w-7xl mx-auto px-6">
@@ -100,7 +102,7 @@ export default function Footer() {
         {/* Bottom bar with Copyright */}
         <div className="mt-8 pt-6 border-t border-slate-900/50 flex justify-end items-center gap-4 w-full">
           <div className="text-[10px] sm:text-xs text-slate-500 whitespace-nowrap text-right pr-1 md:pr-2">
-            &copy; Datsuichi All Rights Reserved.
+            &copy; 2026{currentYear > 2026 ? ` - ${currentYear}` : ''} Datsuichi All Rights Reserved.
           </div>
         </div>
       </div>

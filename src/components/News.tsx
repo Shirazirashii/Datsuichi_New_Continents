@@ -14,9 +14,8 @@ import newsDay6Img from '../assets/datsuichi-news-day6.webp';
 import newsS1EndingImg from '../assets/datsuichi-news-s1-ending.webp';
 import newsWs1Img from '../assets/datsuishi-news-ws1-note.webp';
 import newsWs1ResultImg from '../assets/datsuichi-news-ws1-result.webp';
-
-const s2OpenAsset = import.meta.glob('../assets/datsuichi-news-s2-open.webp', { eager: true, import: 'default' }) as Record<string, string>;
-const newsS2OpenImg = s2OpenAsset['../assets/datsuichi-news-s2-open.webp'] || '/src/assets/datsuichi-news-s2-open.webp';
+import newsS2OpenImg from '../assets/datsuichi-news-s2-open.webp';
+import newsS2Day1Img from '../assets/datsuichi-news-s2-day1.webp';
 
 export interface NewsItem {
   id: string;
@@ -28,6 +27,32 @@ export interface NewsItem {
 }
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 'news-001-s2-day1',
+    date: '2026.10.17',
+    category: 'REPORT',
+    title: 'S2-Day1｜シーズン2始動。一人法人の課題を解き明かす、「AI総務部」構築への第一歩。',
+    images: [newsS2Day1Img],
+    content: `<p>2026年10月17日。<br />AI学習コミュニティ「ダツイチー新大陸」の新たな挑戦「シーズン2」が始動しました。</p>
+<p>今回のテーマは<strong class="text-white font-bold">「AI総務部プロトタイプ構築」</strong>。<br />一人法人におけるバックオフィス業務を劇的に効率化し、経営資源を最適化する「実践的なアプローチです。本プロジェクトでは、参加者各自がレベルや得意分野に応じ、ツール開発に留まらず、ルール策定や会議議事録・提案書の自動作成など、多角的なアウトプットに挑みます。</p>
+<p>キックオフとなるDay 1では、クライアントであるヤジルシ建築設計事務所から山田氏をお迎えしました 。プロジェクトの概要説明だけでなく、建築設計とコンストラクションマネジメント（CM）、プロジェクトマネジメント（PM）をたった一人で手がける山田氏のリアルな声も共有されました。</p>
+<p class="text-white font-bold mt-6 mb-2">■一人法人が直面する6つのリアル</p>
+<p>運営メンバーのミカちゃん氏より「コンストラクションマネジメント（CM）」についての専門的な解説が行われました。CMとは、建築知識を持たない発注者側に寄り添い、コスト・品質・スケジュールの管理を第三者視点で適正に行う重要な役割 。<br />けれど、高度な専門性と多角的な調整が求められるために、案件増加に伴ってバックオフィス業務が肥大化しやすい...そんな切実な課題が、山田氏へのヒアリングを通じて明らかになりました。</p>
+<p><strong class="text-white font-bold">➀ 情報管理とツール活用</strong>：Google Workspaceを導入しているものの、メール下書き程度にしか使えておらず、複数案件の情報整理などに活用できていない。</p>
+<p><strong class="text-white font-bold">②会議まわり</strong>：リアルとオンラインが混在する会議が多いにもかかわらず、議事録作成やフォロー、次回アジェンダの論点整理をマニュアルで行っている。</p>
+<p><strong class="text-white font-bold">③ タスク管理</strong>：時間に余裕がない状態が慢性的に続いており、セルフマネジメントの限界を感じている。</p>
+<p><strong class="text-white font-bold">④数字での経営判断</strong>：引く手あまたである一方で、案件ごとの採算性や費用対効果といった数値的根拠に基づく優先順位づけが十分とは言えない。</p>
+<p><strong class="text-white font-bold">⑤実績の発信</strong>：WebサイトやSNSのアカウントを立ち上げたものの、守秘義務との兼ね合いから、CM・PM実績の掲載方法に工夫を要する。</p>
+<p><strong class="text-white font-bold">⑥ノウハウの蓄積</strong>：一人法人ゆえに業務が属人化しており、将来の組織化を見据えたナレッジ共有の仕組みがまだない。</p>
+<p class="text-white font-bold mt-6 mb-2">■ 「理想の姿」を目指して</p>
+<p>山田氏からの共有を経て、参加者のひとみ氏から「課題解決後の理想の姿（ゴールイメージ）」についての問いかけがなされました。それに対する山田氏の答えは、「雑務から解放され、営業や事業展開など本質的な思考に時間を使いたい」。</p>
+<p>これに対し、ヨコさん氏からは「タスク管理による時間創出が最優先事項かもしれない」、こばちゃん氏からは「小さな負担軽減の積み重ねが重要」、あだっち氏からは「苦手領域を補うAI社員が必要」など、多角的な意見も寄せられました。</p>
+<p class="text-white font-bold mt-6 mb-2">■課題と要件定義の深掘り</p>
+<p>何事も小さな一歩から。参加者たちは、次回（Day 2）に向けたホームワークとして、山田氏の抱える課題の中から、自分の気になるものを選び、深掘りと言語化、そして、解決策のアイデア出しを行っていきます。この小さな試行を起点に、今後の活動を通して「要件定義」の精度を磨いて行きます。</p>
+<p class="text-white font-bold mt-6 mb-2">■ 今後のスケジュール</p>
+<p>● 10/24：ホームワーク（課題選びと、AI活用をした解決のアイデア出し）の締切</p>
+<p>● 10/31：Day 2（要件定義フェーズ）｜課題と解決アイデアの整理</p>`,
+  },
   {
     id: 'news-001-s2-open',
     date: '2026.10.01',
